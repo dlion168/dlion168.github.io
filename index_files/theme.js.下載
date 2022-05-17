@@ -1,0 +1,414 @@
+/**
+ * @file
+ * A JavaScript file for the theme.
+ */
+
+// JavaScript should be made compatible with libraries other than jQuery by
+// wrapping it with an "anonymous closure". See:
+// - https://drupal.org/node/1446420
+// - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
+(function ($, Drupal, window, document) {
+  "use strict";
+
+  window.themeNetivism = {
+    path: window.location.pathname,
+    qs: window.location.search,
+    hash: window.location.hash,
+    viewport: {
+      width: $(window).width(),
+      height: $(window).height()
+    },
+    resizeTimer: null,
+
+    getViewport: function() {
+      themeNetivism.viewport.width = $(window).width();
+      themeNetivism.viewport.height = $(window).height();
+    },
+
+    rwdWrap: function(container) {
+      if (typeof container !== "undefined") {
+        if ($(container).length) {
+          var beWrap = ["iframe", "object", "video", "embed", "table"];
+          var beWrapElem = beWrap.join(", ");
+          $(container).find(beWrapElem).each(function() {
+            var $this = $(this),
+                thisWidth = $this.attr("width"),
+                thisHeight = $this.attr("height");
+
+            if ($this.is("table")) {
+              if ($this.parent(".rwd-table").length == 0) {
+                $this.wrap("<div class='rwd-table'></div>");
+              }
+            }
+            else {
+              if (themeNetivism.viewport.width < 1024) {
+                if ($this.closest(".share-item").length == 0 && $this.closest(".captcha").length == 0 && $this.not(".instagram-media")) {
+                  if ($this.parent(".rwd-media").length == 0 && $this.parent(".media_embed").length == 0) {
+                    $this.wrap("<div class='rwd-media'></div>");
+                  }
+                }
+                if ($this.parent(".media_embed").attr('width')=='1px' || $this.hasClass(".instagram-media") || $this.parent().parent(".xmedia_embed").length ) {
+                  $this.unwrap();
+                }
+              }
+              else {
+                if ($this.parent(".rwd-media").length || $this.parent(".media_embed").length) {
+                  $this.unwrap();
+                }
+              }
+            }
+          });
+        }
+      }
+    },
+
+    formElemsRebuild: function() {
+      if ($(".form-item").length > 0) {
+        // console.log("formElemsRebuild !!!!");
+        $(".form-item input.form-radio, .form-wrapper input.form-checkbox").each(function() {
+          var type = $(this).attr("type");
+          var classname = "form-elem form-elem-" + type;
+          if ($(this).parent("label").length > 0) {
+            //console.log("1");
+            $(this).parent("label").addClass(classname);
+          }
+          else {
+            if ($(this).next("label").length > 0) {
+              //console.log("2");
+              var $wrap = $(this).next("label");
+              $wrap.addClass(classname);
+              $wrap.html("<span class='form-elem-label'>" + $wrap.html() + "</span>");
+              $(this).prependTo($wrap);
+            }
+          }
+        });
+
+        $(".form-item select.form-select").each(function() {
+          $(this).wrap("<div class='form-select-item'></div>");
+        });
+      }
+    },
+
+    mdInit: function() {
+      if ($(".node-form").length) {
+        $(".node-form").addClass("md-container md-inline-form");
+      }
+
+      if ($("form[id^='user-']").length) {
+        $("form[id^='user-']").addClass("md-container");
+
+        if ($(".crm-container").length) {
+          $(".crm-container").addClass("crm-container-md");
+        }
+      }
+
+      if ($(".webform-client-form").length) {
+        $(".webform-client-form").addClass("md-container");
+      }
+    },
+
+    noteInit: function() {
+      if ($(".cavacnote").length > 0) {
+        $(".cavacnote").each(function() {
+          var $this = $(this);
+          var title = $this.attr("popuptitle");
+          var text = $this.attr("popuptext");
+          var icon = "<i class='arrow fa fa-caret-down'></i>";
+          var note = "<div class='note-item'>";
+          
+          if (title) {
+            note += "<h5 class='note-title'>" + title + "</h5>";
+          }
+
+          if (text) {
+            text = text.replace(/#BR#/gm,"<br/>");
+            note += "<p class='note-text'>" + text + "</p>";
+          }
+
+          note += "</div>";
+
+          $this.append(icon).after(note);
+        });
+
+        $(".cavacnote").on("click", function(e) {
+          var $this = $(this);
+          var activeClass = "is-active";
+          if ($this.hasClass(activeClass)) {
+            $this.removeClass(activeClass);
+            $this.next(".note-item").slideUp();
+            $this.children(".arrow").removeClass("fa-caret-up").addClass("fa-caret-down");
+          }
+          else {
+            $this.addClass(activeClass);
+            $this.next(".note-item").slideDown();
+            $this.children(".arrow").removeClass("fa-caret-down").addClass("fa-caret-up");
+          }
+        });
+      }
+    },
+
+    searchBoxInit: function() {
+      var $searchBlock = $(".block-search");
+      var $searchTextField = $(".block-search .form-text");
+      if ($searchBlock.length) {
+        if ($searchTextField.length) {        
+          $searchBlock.hover(
+            function() {
+              $searchTextField.focus();
+            }, function() {
+              $searchTextField.blur();
+            }
+          );
+
+          var placeholderText = $searchTextField.is("[title]") ? $searchTextField.attr("title") : "輸入關鍵字";
+          $searchTextField.attr("placeholder", "輸入關鍵字");
+        }
+      }
+
+      var $mobileSearchBtn = $("#mobile-search-toggle");
+      if ($mobileSearchBtn.length) {
+      }
+    },
+
+    overlayInit: function() {
+      console.log("overlayInit");
+      var $overlay = $(".overlay-container");
+      var $overlayClose = $(".overlay-container .overlay-close");
+      var $overlayContent = $(".overlay-container .overlay-content");
+      var targetID, $target, $targetParent, $targetPrev, $targetNext;
+      var backTarget = "parent"; // parent, prev, next
+      var backMethod = "append"; // append, prepend, before, after
+
+      if ($(".js-overlay").length > 0) {
+        console.log("!!");
+        $(".js-overlay").on("click", function(e) {
+          console.log("click...");
+          var $this = $(this);
+          targetID = $this.attr("data-target");
+          $target = $("#" + targetID);
+          $targetParent = $target.parent();
+          $targetPrev = $target.prev();
+          $targetNext = $target.next();
+          $target.prependTo($overlayContent);
+          $overlay.addClass("is-active");
+          $this.addClass("is-active");
+
+          var $searchTextField, placeholderText;
+          if ($overlay.find("#block-google_cse-google_cse").length) {
+            $searchTextField = $("#block-google_cse-google_cse #edit-query");
+          }
+
+          if ($overlay.find("#block-search-form").length) {
+            $searchTextField = $("#block-search-form #edit-query");
+          }
+
+          if ($searchTextField.length) {
+            placeholderText = $(".i18n-en").length ? "Search" : "請輸入關鍵字";
+            $searchTextField.attr("placeholder", placeholderText);
+          }
+
+          if ($overlay.find(".gsc-results-close-btn").length) {
+            $(".gsc-results-close-btn").trigger("click");
+          }
+        });
+      }
+
+      $overlayClose.on("click", function(e) {
+        var $this = $(this);
+        $overlay.removeClass("is-active");
+        $(".js-overlay").removeClass("is-active");
+
+        if (backTarget == "parent") {
+          if (backMethod == "append") {
+            $targetParent.append($target);
+          }
+        }
+      });
+    },
+
+    backToTop: function() {
+      var $backToTopBtn = $(".back-to-top");
+      if ($backToTopBtn.length) {
+        var scrollTrigger = 200;
+
+        if ($("#header").length) {
+          scrollTrigger = $("#header").outerHeight();
+        }
+        else {
+          if ($(".header").length) {
+            scrollTrigger = $(".header").outerHeight();
+          }
+        }
+
+        $(window).on("scroll", function () {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > scrollTrigger) {
+            $backToTopBtn.addClass("is-active");
+          }
+          else {
+            $backToTopBtn.removeClass("is-active");
+          }
+        });
+
+        $backToTopBtn.on("click", function(e) {
+          e.preventDefault();
+          $("html, body").animate({
+            scrollTop: 0
+          }, 500);
+        });
+      }
+    },
+
+    mobileNav: {
+      stMenu: {
+        open: function($elem) {
+          var $elem = typeof $elem !== undefined ? $elem : "";
+          if ($elem) {
+            $elem.removeClass("is-closed").addClass("is-opened");
+          }
+        },
+        close: function($elem) {
+          var $elem = typeof $elem !== undefined ? $elem : "";
+          if ($elem) {
+            $elem.removeClass("is-opened").addClass("is-closed");
+          }
+        },
+        init: function() {
+          var clickEvent = "click",
+              $html = $("html"),
+              $body = $("body"),
+              $stBtn = $(".st-btn"),
+              $stNav = $(".st-nav"),
+              $stClose = $(".st-close"),
+              $stContent = $('.st-content'),
+              $stContainer = $(".st-container");
+
+          $stBtn.on(clickEvent, function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            var $this = $(this);
+            var target = $this.attr("data-st-target");
+
+            if (target) {
+              var targetSelector = "#" + target;
+
+              $stBtn.not(this).removeClass("is-active");
+              themeNetivism.mobileNav.stMenu.close($stContainer.not(targetSelector));
+
+              var $target = $(targetSelector);
+
+              if ($target.hasClass("is-opened")) {
+                themeNetivism.mobileNav.stMenu.close($target);
+                $this.removeClass("is-active");
+              }
+              else {
+                themeNetivism.mobileNav.stMenu.open($target);
+                $this.addClass("is-active");
+              }
+            }
+          });
+
+          // Add icon to expanded menu item
+          $("#mobile-nav .menu .expanded").each(function() {
+            if ($(this).hasClass("active-trail")) {
+              $(this).children(".menu").addClass("is-active");
+              $(this).append("<a href='#' class='menu-expand is-active'><i class='zmdi zmdi-caret-up' aria-hidden='true'></i></a>")
+            }
+            else {
+              $(this).append("<a href='#' class='menu-expand'><i class='zmdi zmdi-caret-down' aria-hidden='true'></i></a>")
+            }
+          });
+
+          // Add click event to expanded menu item
+          $("#mobile-nav .menu-expand").on(clickEvent, function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            var $this = $(this),
+                $childMenu = $this.prev(".menu");
+
+            $("#mobile-nav .menu .expanded > .menu-expand i").removeClass("zmdi-caret-up").addClass("zmdi-caret-down");
+
+            if ($childMenu.is(':visible')) {
+              $this.removeClass("is-active");
+              $childMenu.removeClass("is-active").slideUp();
+              $this.children("i").removeClass("zmdi-caret-up").addClass("zmdi-caret-down");
+            }
+            else {
+              $this.addClass("is-active");
+              $childMenu.addClass("is-active").slideDown();
+              $this.children("i").removeClass("zmdi-caret-down").addClass("zmdi-caret-up");
+            }
+          });
+        }
+      }
+    },
+
+    crmStyleSwitch: function(style) {
+      var style = typeof style !== undefined ? style : "md",
+          $crmContainer = $(".crm-container"),
+          styleClass = "crm-container-" + style,
+          mdClass = "crm-container-md",
+          rcClass = "crm-container-rc";
+
+      if ($crmContainer.length) {
+        if (style == "md") {
+          $crmContainer.removeClass(rcClass).addClass(mdClass);
+        }
+        if (style == "rc") {
+          $crmContainer.removeClass(mdClass).addClass(rcClass);
+        }
+      }
+    },
+
+    rwdEvent: function(vw) {
+      var $body = $("body");
+      var $header = $("#header");
+
+      if ($(".node-content").length) {
+        themeNetivism.rwdWrap(".node-content");
+      }
+    },
+
+    windowResize: function() {
+      console.log("window resize");
+      themeNetivism.getViewport();
+      themeNetivism.rwdEvent(themeNetivism.viewport.width);
+      console.log(themeNetivism.viewport);
+    },
+
+    init: function() {
+      themeNetivism.rwdEvent(themeNetivism.viewport.width);
+      // themeNetivism.noteInit();
+      // themeNetivism.searchBoxInit();
+      // themeNetivism.mdInit();
+      themeNetivism.formElemsRebuild();
+      themeNetivism.backToTop();
+      themeNetivism.overlayInit();
+
+      console.log("themeNetivism init");
+    }
+  };
+
+  // To understand behaviors, see https://drupal.org/node/756722#behaviors
+  Drupal.behaviors.ourisland2018 = {
+    attach: function (context, settings) {
+      // Do your stuff!
+      // document ready
+      $(document).ready(function() {
+        themeNetivism.init();
+      });
+
+      // window resize
+      $(window).resize(function() {
+        clearTimeout(themeNetivism.resizeTimer);
+        themeNetivism.resizeTimer = setTimeout(themeNetivism.windowResize, 250);
+      });
+    },
+    detach: function (context, settings, trigger) {
+      // Undo something.
+    }
+  };
+
+})(jQuery, Drupal, this, this.document);
