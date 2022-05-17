@@ -1,0 +1,184 @@
+(function($) {
+
+  "use strict";
+
+  var pathname = window.location.pathname;
+  var qs = window.location.search;
+  var hash = window.location.hash;
+
+  // Get viewport
+  var viewport;
+  var getViewport = function() {
+    viewport = {
+      width  : $(window).width(),
+      height : $(window).height()
+    };
+  }
+  getViewport();
+
+  var mainContentInit = function() {
+    var classname = "main-content";
+    var elems = [
+      ".crm-event-info-form-block",
+      ".crm-contribution-main-form-block .intro_text-section"
+    ];
+
+    $.each(elems, function(index, elem) {
+      if ($(elem).length > 0) {
+        $(elem).addClass(classname);
+      }
+    });
+  }
+
+  var equalheight = function(container) {
+    var currentTallest = 0;
+    var currentRowStart = 0;
+    var rowDivs = new Array();
+    var $el;
+    var topPosition = 0;
+
+    $(container).each(function() {
+      $el = $(this);
+      $($el).height('auto');
+      var topPostion = $el.position().top;
+
+      if (currentRowStart != topPostion) {
+        for (var currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+          rowDivs[currentDiv].height(currentTallest);
+        }
+
+        rowDivs.length = 0; // empty the array
+        currentRowStart = topPostion;
+        currentTallest = $el.height();
+        rowDivs.push($el);
+      } 
+      else {
+        rowDivs.push($el);
+        currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+      }
+
+      for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+        rowDivs[currentDiv].height(currentTallest);
+      }
+    });
+  }
+
+  var mediaWrap = function(container) {
+    if (container === undefined) {
+      return false;
+    } else {
+      var beWrap = ["iframe", "object", "video", "embed"];
+      var beWrapElem = beWrap.join(", ");
+      $(container).find(beWrapElem).each(function() {
+        var $this = $(this); 
+        if ($this.parent(".media_embed").length == 0 && $this.closest(".share-item").length == 0 && $this.not(".instagram-media")) {
+          $this.wrap("<div class='media_embed'></div>");
+        }
+      });
+    }
+  }
+
+  // Document ready
+  $(document).ready(function() {
+    // mainContentInit();
+    mediaWrap(".node .content");
+
+    $("#google-cse-results-searchbox-form input#edit-query").attr("placeholder", "搜尋");
+    $(".name-toolbox .views-row").wrap(function(){
+      return "<a href='" + $(".name-toolbox .l2c a").attr('href') + "'>" + "</a>";
+    });
+    $(".entity-list.type-article .views-row").each(function(){
+      $(this).wrap(function(){
+        return "<a href='" + $(".entity-list-title a", this).attr('href') + "'>" + "</a>";
+      });
+    });
+    /*
+    $(".en-list.entity-list.name-topics .views-row").each(function(){
+      $(this).wrap(function(){
+        return "<a href='" + $(".entity-list-title a", this).attr('href') + "'>" + "</a>";
+      });
+    });
+    */
+    $(".topics2 .entity-list.name-topics .views-row").each(function(){
+      $(this).wrap(function(){
+        return "<a href='" + $(".entity-list-title a", this).attr('href') + "'>" + "</a>";
+      });
+    });
+    $('<h2 class="pane-title">申訴專區</h2>').insertBefore(".appeal-page .view-content");
+    $('.page-taxonomy .attr-tag').each(function(){
+      if ($(this).is(':empty')) $(this).css('display', 'none');
+    });
+    if (viewport.width <= 1024) {
+			$('#rp-all').before($('#friends'));
+      $('#mobile-nav').removeClass('is-mobile');
+      $('#google-cse-results-searchbox-form, #google-cse-results').appendTo('#mobile-search');
+		}
+
+    // header images
+    if (viewport.width > 1024) {
+      var imgSrc = $('.block-headerimage .field-name-field-tb-image img').attr('src');
+    }
+    else {
+      var imgSrc = $('.block-headerimage .field-name-field-tb-image-mo img').attr('src');
+    }
+    if (imgSrc) {
+      $('header').css('background-image', 'url(' + imgSrc + ')');
+    }
+    else {
+      $('header').css('background-image', 'url("/sites/all/themes/netivism/css/images/global-header-img.jpg")');
+    }
+    $('.block-headerimage .field-name-field-tb-desc').appendTo('header');
+    $('.block-headerimage ul.links').appendTo('header');
+    $('.node-tags a').each(function(){
+      $(this).attr('data-class', $(this).text());
+    });
+  });
+
+
+
+  // Window load
+  $(window).load(function() {
+    /*
+    if ($(".article-grid-list .views-row").length > 1) {
+      equalheight(".article-grid-list .views-row");
+    }
+    */
+  });
+
+  var resizeTimer;
+  var windowResize = function() {
+    console.log("window resize");
+    // getHeaderOffset();
+  };
+
+  // Window resize
+  $(window).resize(function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(windowResize, 250);
+  });
+
+  // Window scroll
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var $el = $('#superfish-1');
+    var isPositionFixed = ($el.css('position') == 'fixed');
+    var rnavH = $el.height();
+    var Offset = $el.offset();
+    if (Offset) {
+      if ( scroll > (rnavH + Offset.top) && ! isPositionFixed && $('.node-type-topic').length == 0 ) {
+        $el.css({
+          'position': 'fixed'
+        }).addClass('top-pane');
+      }
+      if (scroll < 300 && isPositionFixed) {
+        $el.css({
+          'position': 'static'
+        }).removeClass('top-pane');
+      }
+    }
+    if ($('iframe').hasClass(".instagram-media")) {
+      $this.unwrap();
+    }
+  });
+
+})(jQuery);

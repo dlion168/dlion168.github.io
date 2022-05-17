@@ -1,0 +1,33 @@
+(function($) {
+//console.log($.fn.jquery);
+  "use strict";
+  $(document).ready(function() {
+      var $icon = $("#mobile-nav-toggle");
+
+      $icon.on( "click", function() {
+        var $this = $(this);
+        if ($this.hasClass("is-active")) {
+          $(this).removeClass("is-active");
+          $('#mobile-nav').removeClass('is-active');
+        }
+        else {
+          $(this).addClass("is-active");
+          $('#mobile-nav').addClass('is-active');
+        }
+      });
+      $('#mobile-search-toggle').on( "click", function() {
+        var msearch = $('#mobile-search');
+        if (msearch.hasClass("is-mobile")) {
+          msearch.removeClass("is-mobile");
+          //$('#mobile-nav').removeClass('is-mobile');
+        }
+        else {
+          msearch.addClass("is-mobile");
+        }
+      });
+
+      if ($("#mobile-nav .mm-panels > .mm-panel:first-child > .mm-navbar").length > 0) {
+        $("#mobile-nav .mm-panels > .mm-panel:first-child > .mm-navbar").html("<a href='\\' title='回首頁'><i class='fa fa-home' aria-hidden='true'></i> 首頁</a>");
+      }
+  });
+})(jQuery);
