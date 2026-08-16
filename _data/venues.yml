@@ -1,9 +1,37 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# Colored badges on the publications list and paper pages.
+# The key must match the `abbr` field in _bibliography/papers.bib exactly.
+# Without an entry here the badge still renders, just plain grey.
 
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+"Interspeech":
+  url: https://www.isca-archive.org/
+  color: "#1d4ed8"
+"ICASSP":
+  url: https://signalprocessingsociety.org/
+  color: "#0b5fa5"
+"ASRU":
+  url: https://signalprocessingsociety.org/
+  color: "#0b7285"
+"SLT":
+  url: https://signalprocessingsociety.org/
+  color: "#495057"
+"TASLP":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-audio-speech-and-language-processing
+  color: "#7048e8"
+"CSL":
+  url: https://www.sciencedirect.com/journal/computer-speech-and-language
+  color: "#7048e8"
+"ACL":
+  url: https://aclanthology.org/
+  color: "#c92a2a"
+"EMNLP":
+  url: https://aclanthology.org/
+  color: "#a61e4d"
+"ICLR":
+  url: https://iclr.cc/
+  color: "#e8590c"
+"APSIPA":
+  url: http://www.apsipa.org/
+  color: "#5c7cfa"
+"arXiv":
+  url: https://arxiv.org/
+  color: "#868e96"

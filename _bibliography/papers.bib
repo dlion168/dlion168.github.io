@@ -1,115 +1,711 @@
----
----
+% ============================================================
+%  Yi-Cheng Lin — publications
+%  54 entries. Cross-checked against the author's Google Scholar
+%  profile (N1UuQSUAAAAJ), arXiv API, and Crossref. 2026-08-16.
+%
+%  al-folio / jekyll-scholar. Custom fields:
+%    abbr, arxiv, doi, code, website, award, selected, bibtex_show
+%  Equal-contribution markers (†) are NOT encoded — BibTeX has no
+%  standard field. Add them manually in the rendered template if needed.
+% ============================================================
 
-@string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
-}
+%% ========== Published ==========
 
-@book{einstein1956investigations,
+@inproceedings{hsu2026fallacy,
+  abbr        = {ACL},
   bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+  title       = {On the Fallacy of Global Token Perplexity in Spoken Language Model Evaluation},
+  author      = {Chan-Jan Hsu and Liang-Hsuan Tseng and Yi-Cheng Lin and Yen-Chun Kuo and Ju-Chieh Chou and Kai-Wei Chang and Hung-yi Lee and Carlos Busso},
+  booktitle   = {Findings of the Association for Computational Linguistics: ACL 2026},
+  year        = {2026},
+  pages       = {37000--37020},
+  doi         = {10.18653/v1/2026.findings-acl.1844},
+  arxiv       = {2601.06329},
+  abstract    = {Generative spoken language models pretrained on large-scale raw audio can continue a speech prompt with appropriate content while preserving attributes like speaker and emotion, serving as foundation models for spoken dialogue. In prior literature, these models are often evaluated using ``global token perplexity'', which directly applies the text perplexity formulation to speech tokens. However, this practice overlooks fundamental differences between speech and text modalities, possibly leading to an underestimation of the speech characteristics. In this work, we propose a variety of likelihood- and generative-based evaluation methods that serve in place of naive global token perplexity. We demonstrate that the proposed evaluations more faithfully reflect perceived generation quality, as evidenced by stronger correlations with human-rated mean opinion scores (MOS). When assessed under the new metrics, the relative performance landscape of spoken language models is reshaped, revealing a significantly reduced gap between the best-performing model and the human topline. Together, these results suggest that appropriate evaluation is critical for accurately assessing progress in spoken language modeling.}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
+@article{you2025state,
+  abbr        = {CSL},
   bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
+  title       = {State Space and Self-Attention Collaborative Network with Feature Aggregation for DOA Estimation},
+  author      = {Qi You and Qinghua Huang and Yi-Cheng Lin},
+  journal     = {Computer Speech & Language},
+  year        = {2026},
+  pages       = {101995},
+  doi         = {10.1016/j.csl.2026.101995},
+  arxiv       = {2510.25193},
+  abstract    = {Accurate direction-of-arrival (DOA) estimation for sound sources is challenging due to the continuous changes in acoustic characteristics across time and frequency. In such scenarios, accurate localization relies on the ability to aggregate relevant features and model temporal dependencies effectively. In time series modeling, achieving a balance between model performance and computational efficiency remains a significant challenge. To address this, we propose FA-Stateformer, a state space and self-attention collaborative network with feature aggregation. The proposed network first employs a feature aggregation module to enhance informative features across both temporal and spectral dimensions. This is followed by a lightweight Conformer architecture inspired by the squeeze-and-excitation mechanism, where the feedforward layers are compressed to reduce redundancy and parameter overhead. Additionally, a temporal shift mechanism is incorporated to expand the receptive field of convolutional layers while maintaining a compact kernel size. To further enhance sequence modeling capabilities, a bidirectional Mamba module is introduced, enabling efficient state-space-based representation of temporal dependencies in both forward and backward directions. The remaining self-attention layers are combined with the Mamba blocks, forming a collaborative modeling framework that achieves a balance between representation capacity and computational efficiency. Extensive experiments demonstrate that FA-Stateformer achieves superior performance and efficiency compared to conventional architectures.}
 }
 
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
-}
-
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
-}
-
-@article{einstein1905photoelectriceffect,
+@inproceedings{lin2025pseudoreal,
+  abbr        = {ACL},
   bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
+  title       = {Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech Recognition},
+  author      = {Yi-Cheng Lin and Yu-Hsuan Li Liang and Hsuan Su and Tzu-Quan Lin and Shang-Tse Chen and Yun-Nung Chen and Hung-yi Lee},
+  booktitle   = {Findings of the Association for Computational Linguistics: ACL 2026},
+  year        = {2026},
+  pages       = {1160--1175},
+  doi         = {10.18653/v1/2026.findings-acl.59},
+  arxiv       = {2510.08047},
+  abstract    = {Robust ASR under domain shift is crucial because real-world systems encounter unseen accents and domains with limited labeled data. Although pseudo-labeling offers a practical workaround, it often introduces systematic, accent-specific errors that filtering fails to fix. We ask: How can we correct these recurring biases without target ground truth? We propose a simple parameter-space correction: in a source domain containing both real and pseudo-labeled data, two ASR models are fine-tuned from the same initialization, one on ground-truth labels and the other on pseudo-labels, and their weight difference forms a correction vector that captures pseudo-label biases. When applied to a pseudo-labeled target model, this vector enhances recognition, achieving up to a 35% relative Word Error Rate (WER) reduction on AfriSpeech-200 across ten African accents with the Whisper tiny model.}
 }
 
-@book{przibram1967letters,
+@inproceedings{chen2025bloodroot,
+  abbr        = {ICASSP},
   bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
+  title       = {Bloodroot: When Watermarking Turns Poisonous For Stealthy Backdoor},
+  author      = {Kuan-Yu Chen and Yi-Cheng Lin and Jeng-Lin Li and Jian-Jiun Ding},
+  booktitle   = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2026},
+  pages       = {15782--15786},
+  doi         = {10.1109/ICASSP55912.2026.11462072},
+  arxiv       = {2510.07909},
+  abstract    = {Backdoor data poisoning is a crucial technique for ownership protection and defending against malicious attacks. Embedding hidden triggers in training data can manipulate model outputs, enabling provenance verification, and deterring unauthorized use. However, current audio backdoor methods are suboptimal, as poisoned audio often exhibits degraded perceptual quality, which is noticeable to human listeners. This work explores the intrinsic stealthiness and effectiveness of audio watermarking in achieving successful poisoning. We propose a novel Watermark-as-Trigger concept, integrated into the Bloodroot backdoor framework via adversarial LoRA fine-tuning, which enhances perceptual quality while achieving a much higher trigger success rate and clean-sample accuracy. Experiments on speech recognition (SR) and speaker identification (SID) datasets show that watermark-based poisoning remains effective under acoustic filtering and model pruning. The proposed Bloodroot backdoor framework not only secures data-to-model ownership, but also well reveals the risk of adversarial misuse.}
+}
+
+@inproceedings{xuan2025wavespnet,
+  abbr        = {ICASSP},
+  bibtex_show = {true},
+  title       = {WaveSP-Net: Learnable Wavelet-Domain Sparse Prompt Tuning for Speech Deepfake Detection},
+  author      = {Xi Xuan and Xuechen Liu and Wenxin Zhang and Yi-Cheng Lin and Xiaojian Lin and Tomi Kinnunen},
+  booktitle   = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2026},
+  pages       = {18047--18051},
+  doi         = {10.1109/ICASSP55912.2026.11461768},
+  arxiv       = {2510.05305},
+  abstract    = {Modern front-end design for speech deepfake detection relies on full fine-tuning of large pre-trained models like XLSR. However, this approach is not parameter-efficient and may lead to suboptimal generalization to realistic, in-the-wild data types. To address these limitations, we introduce a new family of parameter-efficient front-ends that fuse prompt-tuning with classical signal processing transforms. These include FourierPT-XLSR, which uses the Fourier Transform, and two variants based on the Wavelet Transform: WSPT-XLSR and Partial-WSPT-XLSR. We further propose WaveSP-Net, a novel architecture combining a Partial-WSPT-XLSR front-end and a bidirectional Mamba-based back-end. This design injects multi-resolution features into the prompt embeddings, which enhances the localization of subtle synthetic artifacts without altering the frozen XLSR parameters. Experimental results demonstrate that WaveSP-Net outperforms several state-of-the-art models on two new and challenging benchmarks, Deepfake-Eval-2024 and SpoofCeleb, with low trainable parameters and notable performance gains. The code and models are available at https://github.com/xxuan-acoustics/WaveSP-Net.}
+}
+
+@inproceedings{lin2025tau,
+  abbr        = {ICASSP},
+  bibtex_show = {true},
+  title       = {TAU: A Benchmark for Cultural Sound Understanding Beyond Semantics},
+  author      = {Yi-Cheng Lin and Yu-Hua Chen and Jia-Kai Dong and Yueh-Hsuan Huang and Szu-Chi Chen and Yu-Chen Chen and Chih-Yao Chen and Yu-Jung Lin and Yu-Ling Chen and Zih-Yu Chen and I-Ning Tsai and Hsiu-Hsuan Wang and Ho-Lam Chung and Ke-Han Lu and Hung-yi Lee},
+  booktitle   = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2026},
+  pages       = {15542--15546},
+  doi         = {10.1109/ICASSP55912.2026.11461652},
+  arxiv       = {2509.26329},
+  abstract    = {Large audio-language models are advancing rapidly, yet most evaluations emphasize speech or globally sourced sounds, overlooking culturally distinctive cues. This gap raises a critical question: can current models generalize to localized, non-semantic audio that communities instantly recognize but outsiders do not? To address this, we present TAU (Taiwan Audio Understanding), a benchmark of everyday Taiwanese "soundmarks." TAU is built through a pipeline combining curated sources, human editing, and LLM-assisted question generation, producing 702 clips and 1,794 multiple-choice items that cannot be solved by transcripts alone. Experiments show that state-of-the-art LALMs, including Gemini 2.5 and Qwen2-Audio, perform far below local humans. TAU demonstrates the need for localized benchmarks to reveal cultural blind spots, guide more equitable multimodal evaluation, and ensure models serve communities beyond the global mainstream.}
+}
+
+@inproceedings{huang2025mifuse,
+  abbr        = {ICASSP},
+  bibtex_show = {true},
+  title       = {MI-Fuse: Label Fusion for Unsupervised Domain Adaptation with Closed-Source Large-Audio Language Model},
+  author      = {Hsiao-Ying Huang and Yi-Cheng Lin and Hung-yi Lee},
+  booktitle   = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2026},
+  pages       = {16432--16436},
+  doi         = {10.1109/ICASSP55912.2026.11464525},
+  arxiv       = {2509.20706},
+  abstract    = {Large audio-language models (LALMs) show strong zero-shot ability on speech tasks, suggesting promise for speech emotion recognition (SER). However, SER in real-world deployments often fails under domain mismatch, where source data are unavailable and powerful LALMs are accessible only through an API. We ask: given only unlabeled target-domain audio and an API-only LALM, can a student model be adapted to outperform the LALM in the target domain? To this end, we propose MI-Fuse, a denoised label fusion framework that supplements the LALM with a source-domain trained SER classifier as an auxiliary teacher. The framework draws multiple stochastic predictions from both teachers, weights their mean distributions by mutual-information-based uncertainty, and stabilizes training with an exponential moving average teacher. Experiments across three public emotion datasets and six cross-domain transfers show consistent gains, with the student surpassing the LALM and outperforming the strongest baseline by 3.9%. This approach strengthens emotion-aware speech systems without sharing source data, enabling realistic adaptation.}
+}
+
+@inproceedings{chen2025instrumental,
+  abbr        = {ICASSP},
+  bibtex_show = {true},
+  title       = {How Does Instrumental Music Help SingFake Detection?},
+  author      = {Xuanjun Chen and Chia-Yu Hu and I-Ming Lin and Yi-Cheng Lin and I-Hsiang Chiu and You Zhang and Sung-Feng Huang and Yi-Hsuan Yang and Haibin Wu and Hung-yi Lee and Jyh-Shing Roger Jang},
+  booktitle   = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2026},
+  pages       = {19072--19076},
+  doi         = {10.1109/ICASSP55912.2026.11460829},
+  arxiv       = {2509.14675},
+  abstract    = {Although many models exist to detect singing voice deepfakes (SingFake), how these models operate, particularly with instrumental accompaniment, is unclear. We investigate how instrumental music affects SingFake detection from two perspectives. To investigate the behavioral effect, we test different backbones, unpaired instrumental tracks, and frequency subbands. To analyze the representational effect, we probe how fine-tuning alters encoders' speech and music capabilities. Our results show that instrumental accompaniment acts mainly as data augmentation rather than providing intrinsic cues (e.g., rhythm or harmony). Furthermore, fine-tuning increases reliance on shallow speaker features while reducing sensitivity to content, paralinguistic, and semantic information. These insights clarify how models exploit vocal versus instrumental cues and can inform the design of more interpretable and robust SingFake detection systems.}
+}
+
+@inproceedings{lin2025you,
+  abbr        = {ICASSP},
+  bibtex_show = {true},
+  title       = {Do You Hear What I Mean? Quantifying the Instruction-Perception Gap in Instruction-Guided Expressive Text-To-Speech Systems},
+  author      = {Yi-Cheng Lin and Huang-Cheng Chou and Tzu-Chieh Wei and Kuan-Yu Chen and Hung-yi Lee},
+  booktitle   = {ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2026},
+  pages       = {16472--16476},
+  doi         = {10.1109/ICASSP55912.2026.11462935},
+  arxiv       = {2509.13989},
+  abstract    = {Instruction-guided text-to-speech (ITTS) enables users to control speech generation through natural language prompts, offering a more intuitive interface than traditional TTS. However, the alignment between user style instructions and listener perception remains largely unexplored. This work first presents a perceptual analysis of ITTS controllability across two expressive dimensions (adverbs of degree and graded emotion intensity) and collects human ratings on speaker age and word-level emphasis attributes. To comprehensively reveal the instruction-perception gap, we provide a data collection with large-scale human evaluations, named Expressive VOice Control (E-VOC) corpus. Furthermore, we reveal that (1) gpt-4o-mini-tts is the most reliable ITTS model with great alignment between instruction and generated utterances across acoustic dimensions. (2) The 5 analyzed ITTS systems tend to generate Adult voices even when the instructions ask to use child or Elderly voices. (3) Fine-grained control remains a major challenge, indicating that most ITTS systems have substantial room for improvement in interpreting slightly different attribute instructions.},
+  website     = {https://ag027592.github.io/Do-You-Hear-What-I-Mean/},
+  selected    = {true}
+}
+
+@article{lu2025destaaudio,
+  abbr        = {TASLP},
+  bibtex_show = {true},
+  title       = {DeSTA2.5-Audio: Toward General-Purpose Large Audio Language Model with Self-Generated Cross-Modal Alignment},
+  author      = {Ke-Han Lu and Zhehuai Chen and Szu-Wei Fu and Chao-Han Huck Yang and Sung-Feng Huang and Chih-Kai Yang and Chee-En Yu and Chun-Wei Chen and Wei-Chih Chen and Chien-yu Huang and Yi-Cheng Lin and Yu-Xiang Lin and Chi-An Fu and Chun-Yi Kuan and Wenze Ren and Xuanjun Chen and Wei-Ping Huang and En-Pei Hu and Tzu-Quan Lin and Yuan-Kuei Wu and Kuan-Po Huang and Hsiao-Ying Huang and Huang-Cheng Chou and Kai-Wei Chang and Cheng-Han Chiang and Boris Ginsburg and Yu-Chiang Frank Wang and Hung-yi Lee},
+  journal     = {IEEE Transactions on Audio, Speech and Language Processing},
+  year        = {2026},
+  pages       = {2062--2076},
+  doi         = {10.1109/TASLPRO.2026.3675792},
+  arxiv       = {2507.02768},
+  abstract    = {We introduce DeSTA2.5-Audio, a general-purpose Large Audio Language Model (LALM) designed for robust auditory perception and instruction-following. Recent LALMs augment Large Language Models (LLMs) with auditory capabilities by training on large-scale audio-instruction datasets. However, existing LALMs have often suffered from the catastrophic forgetting of the LLM's original abilities. Therefore, balancing knowledge retention and audio perception has become a critical challenge. To address this, we revisit the data construction pipeline and propose a self-generated cross-modal alignment strategy in which the backbone LLM generates its own training targets, named DeSTA. This approach aims at preserving the LLM's native language proficiency thereby enabling zero-shot generalization without task-specific tuning. We construct DeSTA-AQA5M, a large-scale, task-agnostic dataset containing 5 million training samples derived from 7,000 hours of audio spanning 50 diverse datasets, including speech, environmental sounds, and music. DeSTA2.5-Audio achieves state-of-the-art or competitive performance across a wide range of audio-language benchmarks, including Dynamic-SUPERB, MMAU, SAKURA, Speech-IFEval, and VoiceBench. Comprehensive comparative studies demonstrate that our self-generated strategy outperforms existing training strategies. Our findings underscore the importance of carefully designed data construction in LALM development and offer practical insights for building robust, general-purpose LALMs.},
+  code        = {https://github.com/kehanlu/DeSTA2.5-Audio},
+  selected    = {true}
+}
+
+@inproceedings{xuan2025fakemamba,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {Fake-Mamba: Real-Time Speech Deepfake Detection Using Bidirectional Mamba as Self-Attention's Alternative},
+  author      = {Xi Xuan and Zimo Zhu and Wenxin Zhang and Yi-Cheng Lin and Tomi Kinnunen},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--8},
+  doi         = {10.1109/ASRU65441.2025.11434679},
+  arxiv       = {2508.09294},
+  abstract    = {Advances in speech synthesis intensify security threats, motivating real-time deepfake detection research. We investigate whether bidirectional Mamba can serve as a competitive alternative to Self-Attention in detecting synthetic speech. Our solution, Fake-Mamba, integrates an XLSR front-end with bidirectional Mamba to capture both local and global artifacts. Our core innovation introduces three efficient encoders: TransBiMamba, ConBiMamba, and PN-BiMamba. Leveraging XLSR's rich linguistic representations, PN-BiMamba can effectively capture the subtle cues of synthetic speech. Evaluated on ASVspoof 21 LA, 21 DF, and In-The-Wild benchmarks, Fake-Mamba achieves 0.97%, 1.74%, and 5.85% EER, respectively, representing substantial relative gains over SOTA models XLSR-Conformer and XLSR-Mamba. The framework maintains real-time inference across utterance lengths, demonstrating strong generalization and practical viability. The code is available at https://github.com/xuanxixi/Fake-Mamba.}
+}
+
+@inproceedings{rittergutierrez2025astarntu,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {ASTAR-NTU solution to AudioMOS Challenge 2025 Track1},
+  author      = {Fabian Ritter-Gutierrez and Yi-Cheng Lin and Jui-Chiang Wei and Jeremy H. M. Wong and Nancy F. Chen and Hung-yi Lee},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--4},
+  doi         = {10.1109/ASRU65441.2025.11434795},
+  arxiv       = {2507.09904},
+  abstract    = {Evaluation of text-to-music systems is constrained by the cost and availability of collecting experts for assessment. AudioMOS 2025 Challenge track 1 is created to automatically predict music impression (MI) as well as text alignment (TA) between the prompt and the generated musical piece. This paper reports our winning system, which uses a dual-branch architecture with pre-trained MuQ and RoBERTa models as audio and text encoders. A cross-attention mechanism fuses the audio and text representations. For training, we reframe the MI and TA prediction as a classification task. To incorporate the ordinal nature of MOS scores, one-hot labels are converted to a soft distribution using a Gaussian kernel. On the official test set, a single model trained with this method achieves a system-level Spearman's Rank Correlation Coefficient (SRCC) of 0.991 for MI and 0.952 for TA, corresponding to a relative improvement of 21.21\% in MI SRCC and 31.47\% in TA SRCC over the challenge baseline.}
+}
+
+@inproceedings{lin2025mmmos,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {MMMOS: Multi-domain Multi-axis Audio Quality Assessment},
+  author      = {Yi-Cheng Lin and Jia-Hung Chen and Hung-yi Lee},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--4},
+  doi         = {10.1109/ASRU65441.2025.11433844},
+  arxiv       = {2507.04094},
+  abstract    = {Accurate audio quality estimation is essential for developing and evaluating audio generation, retrieval, and enhancement systems. Existing non-intrusive assessment models predict a single Mean Opinion Score (MOS) for speech, merging diverse perceptual factors and failing to generalize beyond speech. We propose MMMOS, a no-reference, multi-domain audio quality assessment system that estimates four orthogonal axes: Production Quality, Production Complexity, Content Enjoyment, and Content Usefulness across speech, music, and environmental sounds. MMMOS fuses frame-level embeddings from three pretrained encoders (WavLM, MuQ, and M2D) and evaluates three aggregation strategies with four loss functions. By ensembling the top eight models, MMMOS shows a 20-30% reduction in mean squared error and a 4-5% increase in Kendall's τ versus baseline, gains first place in six of eight Production Complexity metrics, and ranks among the top three on 17 of 32 challenge metrics.}
+}
+
+@inproceedings{ren2025highratemos,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {HighRateMOS: Sampling-Rate Aware Modeling for Speech Quality Assessment},
+  author      = {Wenze Ren and Yi-Cheng Lin and Wen-Chin Huang and Ryandhimas E. Zezario and Szu-Wei Fu and Sung-Feng Huang and Erica Cooper and Haibin Wu and Hung-Yu Wei and Hsin-Min Wang and Hung-yi Lee and Yu Tsao},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--4},
+  doi         = {10.1109/ASRU65441.2025.11434689},
+  arxiv       = {2506.21951},
+  abstract    = {Modern speech quality prediction models are trained on audio data resampled to a specific sampling rate. When faced with higher-rate audio at test time, these models can produce biased scores. We introduce HighRateMOS, the first non-intrusive mean opinion score (MOS) model that explicitly considers sampling rate. HighRateMOS ensembles three model variants that exploit the following information: (i) a learnable embedding of speech sampling rate, (ii) Wav2vec 2.0 self-supervised embeddings, (iii) multi-scale CNN spectral features, and (iv) MFCC features. In AudioMOS 2025 Track3, HighRateMOS ranked first in five out of eight metrics. Our experiments confirm that modeling the sampling rate directly leads to more robust and sampling-rate-agnostic speech quality predictions.}
+}
+
+@inproceedings{rittergutierrez2025correlationpermutation,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {A correlation-permutation approach for speech-music encoders model merging},
+  author      = {Fabian Ritter-Gutierrez and Yi-Cheng Lin and Jeremy H. M Wong and Hung-yi Lee and Eng Siong Chng and Nancy F. Chen},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--7},
+  doi         = {10.1109/ASRU65441.2025.11433848},
+  arxiv       = {2506.11403},
+  abstract    = {Creating a unified speech and music model requires expensive pre-training. Model merging can instead create an unified audio model with minimal computational expense. However, direct merging is challenging when the models are not aligned in the weight space. Motivated by Git Re-Basin, we introduce a correlation-permutation approach that aligns a music encoder's internal layers with a speech encoder. We extend previous work to the case of merging transformer layers. The method computes a permutation matrix that maximizes the model's features-wise cross-correlations layer by layer, enabling effective fusion of these otherwise disjoint models. The merged model retains speech capabilities through this method while significantly enhancing music performance, achieving an improvement of 14.83 points in average score compared to linear interpolation model merging. This work allows the creation of unified audio models from independently trained encoders.}
+}
+
+@inproceedings{wei2025multidistillation,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {Multi-Distillation from Speech and Music Representation Models},
+  author      = {Jui-Chiang Wei and Yi-Cheng Lin and Fabian Ritter-Gutierrez and Hung-yi Lee},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--8},
+  doi         = {10.1109/ASRU65441.2025.11434750},
+  arxiv       = {2506.07237},
+  abstract    = {Real-world audio often mixes speech and music, yet models typically handle only one domain. This paper introduces a multi-teacher distillation framework that unifies speech and music models into a single one while significantly reducing model size. Our approach leverages the strengths of domain-specific teacher models, such as HuBERT for speech and MERT for music, and explores various strategies to balance both domains. Experiments across diverse tasks demonstrate that our model matches the performance of domain-specific models, showing the effectiveness of cross-domain distillation. Additionally, we conduct few-shot learning experiments, highlighting the need for general models in real-world scenarios where labeled data is limited. Our results show that our model not only performs on par with specialized models but also outperforms them in few-shot scenarios, proving that a cross-domain approach is essential and effective for diverse tasks with limited data.},
+  code        = {https://github.com/johnwei0325/Multi-Distillation-from-Speech-and-Music-Representation-Models}
+}
+
+@inproceedings{tsai2025covada,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {CO-VADA: A Confidence-Oriented Voice Augmentation Debiasing Approach for Fair Speech Emotion Recognition},
+  author      = {Yun-Shao Tsai and Yi-Cheng Lin and Huang-Cheng Chou and Hung-yi Lee},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--8},
+  doi         = {10.1109/ASRU65441.2025.11434684},
+  arxiv       = {2506.06071},
+  abstract    = {Bias in speech emotion recognition (SER) systems often stems from spurious correlations between speaker characteristics and emotional labels, leading to unfair predictions across demographic groups. Many existing debiasing methods require model-specific changes or demographic annotations, limiting their practical use. We present CO-VADA, a Confidence-Oriented Voice Augmentation Debiasing Approach that mitigates bias without modifying model architecture or relying on demographic information. CO-VADA identifies training samples that reflect bias patterns present in the training data and then applies voice conversion to alter irrelevant attributes and generate samples. These augmented samples introduce speaker variations that differ from dominant patterns in the data, guiding the model to focus more on emotion-relevant features. Our framework is compatible with various SER models and voice conversion tools, making it a scalable and practical solution for improving fairness in SER systems.}
+}
+
+@inproceedings{lin2025emodebias,
+  abbr        = {ASRU},
+  bibtex_show = {true},
+  title       = {EMO-Debias: Benchmarking Gender Debiasing Techniques in Multi-Label Speech Emotion Recognition},
+  author      = {Yi-Cheng Lin and Huang-Cheng Chou and Yu-Hsuan Li Liang and Hung-yi Lee},
+  booktitle   = {2025 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)},
+  year        = {2025},
+  pages       = {1--8},
+  doi         = {10.1109/ASRU65441.2025.11433837},
+  arxiv       = {2506.04652},
+  abstract    = {Speech emotion recognition (SER) systems often exhibit gender bias. However, the effectiveness and robustness of existing debiasing methods in such multi-label scenarios remain underexplored. To address this gap, we present EMO-Debias, a large-scale comparison of 13 debiasing methods applied to multi-label SER. Our study encompasses techniques from pre-processing, regularization, adversarial learning, biased learners, and distributionally robust optimization. Experiments conducted on acted and naturalistic emotion datasets, using WavLM and XLSR representations, evaluate each method under conditions of gender imbalance. Our analysis quantifies the trade-offs between fairness and accuracy, identifying which approaches consistently reduce gender performance gaps without compromising overall model performance. The findings provide actionable insights for selecting effective debiasing strategies and highlight the impact of dataset distributions.},
+  selected    = {true}
+}
+
+@inproceedings{lin2025creativity,
+  abbr        = {EMNLP},
+  bibtex_show = {true},
+  title       = {Creativity in LLM-based Multi-Agent Systems: A Survey},
+  author      = {Yi-Cheng Lin and Kang-Chieh Chen and Zhe-Yan Li and Tzu-Heng Wu and Tzu-Hsuan Wu and Kuan-Yu Chen and Hung-yi Lee and Yun-Nung Chen},
+  booktitle   = {Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  year        = {2025},
+  pages       = {27572--27595},
+  doi         = {10.18653/v1/2025.emnlp-main.1403},
+  arxiv       = {2505.21116},
+  abstract    = {Large language model (LLM)-driven multi-agent systems (MAS) are transforming how humans and AIs collaboratively generate ideas and artifacts. While existing surveys provide comprehensive overviews of MAS infrastructures, they largely overlook the dimension of creativity, including how novel outputs are generated and evaluated, how creativity informs agent personas, and how creative workflows are coordinated. This is the first survey dedicated to creativity in MAS. We focus on text and image generation tasks, and present: (1) a taxonomy of agent proactivity and persona design; (2) an overview of generation techniques, including divergent exploration, iterative refinement, and collaborative synthesis, as well as relevant datasets and evaluation metrics; and (3) a discussion of key challenges, such as inconsistent evaluation standards, insufficient bias mitigation, coordination conflicts, and the lack of unified benchmarks. This survey offers a structured framework and roadmap for advancing the development, evaluation, and standardization of creative MAS.},
+  code        = {https://github.com/MiuLab/MultiAgent-Survey},
+  selected    = {true}
+}
+
+@inproceedings{shen2025metaperser,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {Meta-PerSER: Few-Shot Listener Personalized Speech Emotion Recognition via Meta-learning},
+  author      = {Liang-Yeh Shen and Shi-Xin Fang and Yi-Cheng Lin and Huang-Cheng Chou and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2025},
+  year        = {2025},
+  pages       = {136--140},
+  doi         = {10.21437/Interspeech.2025-832},
+  arxiv       = {2505.16220},
+  abstract    = {This paper introduces Meta-PerSER, a novel meta-learning framework that personalizes Speech Emotion Recognition (SER) by adapting to each listener's unique way of interpreting emotion. Conventional SER systems rely on aggregated annotations, which often overlook individual subtleties and lead to inconsistent predictions. In contrast, Meta-PerSER leverages a Model-Agnostic Meta-Learning (MAML) approach enhanced with Combined-Set Meta-Training, Derivative Annealing, and per-layer per-step learning rates, enabling rapid adaptation with only a few labeled examples. By integrating robust representations from pre-trained self-supervised models, our framework first captures general emotional cues and then fine-tunes itself to personal annotation styles. Experiments on the IEMOCAP corpus demonstrate that Meta-PerSER significantly outperforms baseline methods in both seen and unseen data scenarios, highlighting its promise for personalized emotion recognition.},
+  code        = {https://github.com/Jeffabcd/Meta-PerSER}
+}
+
+@inproceedings{luo2025toxictone,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {ToxicTone: A Mandarin Audio Dataset Annotated for Toxicity and Toxic Utterance Tonality},
+  author      = {Yu-Xiang Luo and Yi-Cheng Lin and Ming-To Chuang and Jia-Hung Chen and I-Ning Tsai and Pei Xing Kiew and Yueh-Hsuan Huang and Chien-Feng Liu and Yu-Chen Chen and Bo-Han Feng and Wenze Ren and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2025},
+  year        = {2025},
+  pages       = {4008--4012},
+  doi         = {10.21437/Interspeech.2025-679},
+  arxiv       = {2505.15773},
+  abstract    = {Despite extensive research on toxic speech detection in text, a critical gap remains in handling spoken Mandarin audio. The lack of annotated datasets that capture the unique prosodic cues and culturally specific expressions in Mandarin leaves spoken toxicity underexplored. To address this, we introduce ToxicTone -- the largest public dataset of its kind -- featuring detailed annotations that distinguish both forms of toxicity (e.g., profanity, bullying) and sources of toxicity (e.g., anger, sarcasm, dismissiveness). Our data, sourced from diverse real-world audio and organized into 13 topical categories, mirrors authentic communication scenarios. We also propose a multimodal detection framework that integrates acoustic, linguistic, and emotional features using state-of-the-art speech and emotion encoders. Extensive experiments show our approach outperforms text-only and baseline models, underscoring the essential role of speech-specific cues in revealing hidden toxic expressions.}
+}
+
+@inproceedings{lin2025mitigating,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {Mitigating Subgroup Disparities in Multi-Label Speech Emotion Recognition: A Pseudo-Labeling and Unsupervised Learning Approach},
+  author      = {Yi-Cheng Lin and Huang-Cheng Chou and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2025},
+  year        = {2025},
+  pages       = {2053--2057},
+  doi         = {10.21437/Interspeech.2025-662},
+  arxiv       = {2505.14449},
+  abstract    = {While subgroup disparities and performance bias are increasingly studied in computational research, fairness in categorical Speech Emotion Recognition (SER) remains underexplored. Existing methods often rely on explicit demographic labels, which are difficult to obtain due to privacy concerns. To address this limitation, we introduce an Implicit Demography Inference (IDI) module that leverages pseudo-labeling from a pre-trained model and unsupervised learning using k-means clustering to mitigate bias in SER. Our experiments show that pseudo-labeling IDI reduces subgroup disparities, improving fairness metrics by over 28% with less than a 2% decrease in SER accuracy. Also, the unsupervised IDI yields more than a 4.6% improvement in fairness metrics with a drop of less than 3.6% in SER performance. Further analyses reveal that the unsupervised IDI consistently mitigates race and age disparities, demonstrating its potential when explicit demographic information is unavailable.}
+}
+
+@inproceedings{rittergutierrez2025distilling,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {Distilling a speech and music encoder with task arithmetic},
+  author      = {Fabian Ritter-Gutierrez and Yi-Cheng Lin and Jui-Chiang Wei and Jeremy H. M Wong and Eng Siong Chng and Nancy F. Chen and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2025},
+  year        = {2025},
+  pages       = {3858--3862},
+  doi         = {10.21437/Interspeech.2025-747},
+  arxiv       = {2505.13270},
+  abstract    = {Despite the progress in self-supervised learning (SSL) for speech and music, existing models treat these domains separately, limiting their capacity for unified audio understanding. A unified model is desirable for applications that require general representations, e.g. audio large language models. Nonetheless, directly training a general model for speech and music is computationally expensive. Knowledge Distillation of teacher ensembles may be a natural solution, but we posit that decoupling the distillation of the speech and music SSL models allows for more flexibility. Thus, we propose to learn distilled task vectors and then linearly interpolate them to form a unified speech+music model. This strategy enables flexible domain emphasis through adjustable weights and is also simpler to train. Experiments on speech and music benchmarks demonstrate that our method yields superior overall performance compared to ensemble distillation.}
+}
+
+@inproceedings{huang2024dynamicsuperb,
+  abbr        = {ICLR},
+  bibtex_show = {true},
+  title       = {Dynamic-SUPERB Phase-2: A Collaboratively Expanding Benchmark for Measuring the Capabilities of Spoken Language Models with 180 Tasks},
+  author      = {Chien-yu Huang and Wei-Chih Chen and Shu-wen Yang and Andy T. Liu and Chen-An Li and Yu-Xiang Lin and Wei-Cheng Tseng and Anuj Diwan and Yi-Jen Shih and Jiatong Shi and William Chen and Chih-Kai Yang and Wenze Ren and Xuanjun Chen and Chi-Yuan Hsiao and Puyuan Peng and Shih-Heng Wang and Chun-Yi Kuan and Ke-Han Lu and Kai-Wei Chang and Fabian Ritter-Gutierrez and Kuan-Po Huang and Siddhant Arora and You-Kuan Lin and Ming To Chuang and Eunjung Yeo and Kalvin Chang and Chung-Ming Chien and Kwanghee Choi and Jun-You Wang and Cheng-Hsiu Hsieh and Yi-Cheng Lin and Chee-En Yu and I-Hsiang Chiu and Heitor R. Guimarães and Jionghao Han and Tzu-Quan Lin and Tzu-Yuan Lin and Homu Chang and Ting-Wu Chang and Chun Wei Chen and Shou-Jen Chen and Yu-Hua Chen and Hsi-Chun Cheng and Kunal Dhawan and Jia-Lin Fang and Shi-Xin Fang and Kuan-Yu Fang Chiang and Chi An Fu and Hsien-Fu Hsiao and Ching Yu Hsu and Shao-Syuan Huang and Lee Chen Wei and Hsi-Che Lin and Hsuan-Hao Lin and Hsuan-Ting Lin and Jian-Ren Lin and Ting-Chun Liu and Li-Chun Lu and Tsung-Min Pai and Ankita Pasad and Shih-Yun Shan Kuan and Suwon Shon and Yuxun Tang and Yun-Shao Tsai and Jui-Chiang Wei and Tzu-Chieh Wei and Chengxi Wu and Dien-Ruei Wu and Chao-Han Huck Yang and Chieh-Chi Yang and Jia Qi Yip and Shao-Xiang Yuan and Vahid Noroozi and Zhehuai Chen and Haibin Wu and Karen Livescu and David Harwath and Shinji Watanabe and Hung-yi Lee},
+  booktitle   = {The Thirteenth International Conference on Learning Representations (ICLR)},
+  year        = {2025},
+  arxiv       = {2411.05361},
+  abstract    = {Multimodal foundation models, such as Gemini and ChatGPT, have revolutionized human-machine interactions by seamlessly integrating various forms of data. Developing a universal spoken language model that comprehends a wide range of natural language instructions is critical for bridging communication gaps and facilitating more intuitive interactions. However, the absence of a comprehensive evaluation benchmark poses a significant challenge. We present Dynamic-SUPERB Phase-2, an open and evolving benchmark for the comprehensive evaluation of instruction-based universal speech models. Building upon the first generation, this second version incorporates 125 new tasks contributed collaboratively by the global research community, expanding the benchmark to a total of 180 tasks, making it the largest benchmark for speech and audio evaluation. While the first generation of Dynamic-SUPERB was limited to classification tasks, Dynamic-SUPERB Phase-2 broadens its evaluation capabilities by introducing a wide array of novel and diverse tasks, including regression and sequence generation, across speech, music, and environmental audio. Evaluation results show that no model performed well universally. SALMONN-13B excelled in English ASR and Qwen2-Audio-7B-Instruct showed high accuracy in emotion recognition, but current models still require further innovations to handle a broader range of tasks. We open-source all task data and the evaluation pipeline at https://github.com/dynamic-superb/dynamic-superb.}
+}
+
+@inproceedings{lin2024improving,
+  abbr        = {ICASSP},
+  bibtex_show = {true},
+  title       = {Improving Speech Emotion Recognition in Under-Resourced Languages via Speech-to-Speech Translation with Bootstrapping Data Selection},
+  author      = {Hsi-Che Lin and Yi-Cheng Lin and Huang-Cheng Chou and Hung-yi Lee},
+  booktitle   = {ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2025},
+  pages       = {1--5},
+  doi         = {10.1109/ICASSP49660.2025.10887615},
+  arxiv       = {2409.10985},
+  abstract    = {Speech Emotion Recognition (SER) is a crucial component in developing general-purpose AI agents capable of natural human-computer interaction. However, building robust multilingual SER systems remains challenging due to the scarcity of labeled data in languages other than English and Chinese. In this paper, we propose an approach to enhance SER performance in low SER resource languages by leveraging data from high-resource languages. Specifically, we employ expressive Speech-to-Speech translation (S2ST) combined with a novel bootstrapping data selection pipeline to generate labeled data in the target language. Extensive experiments demonstrate that our method is both effective and generalizable across different upstream models and languages. Our results suggest that this approach can facilitate the development of more scalable and robust multilingual SER systems.}
+}
+
+@inproceedings{ren2024leveraging,
+  abbr        = {ICASSP},
+  bibtex_show = {true},
+  title       = {Leveraging Joint Spectral and Spatial Learning with MAMBA for Multichannel Speech Enhancement},
+  author      = {Wenze Ren and Haibin Wu and Yi-Cheng Lin and Xuanjun Chen and Rong Chao and Kuo-Hsuan Hung and You-Jin Li and Wen-Yuan Ting and Hsin-Min Wang and Yu Tsao},
+  booktitle   = {ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year        = {2025},
+  pages       = {1--5},
+  doi         = {10.1109/ICASSP49660.2025.10890412},
+  arxiv       = {2409.10376},
+  abstract    = {In multichannel speech enhancement, effectively capturing spatial and spectral information across different microphones is crucial for noise reduction. Traditional methods, such as CNN or LSTM, attempt to model the temporal dynamics of full-band and sub-band spectral and spatial features. However, these approaches face limitations in fully modeling complex temporal dependencies, especially in dynamic acoustic environments. To overcome these challenges, we modify the current advanced model McNet by introducing an improved version of Mamba, a state-space model, and further propose MCMamba. MCMamba has been completely reengineered to integrate full-band and narrow-band spatial information with sub-band and full-band spectral features, providing a more comprehensive approach to modeling spatial and spectral information. Our experimental results demonstrate that MCMamba significantly improves the modeling of spatial and spectral features in multichannel speech enhancement, outperforming McNet and achieving state-of-the-art performance on the CHiME-3 dataset. Additionally, we find that Mamba performs exceptionally well in modeling spectral information.}
+}
+
+@inproceedings{liu2024efficient,
+  abbr        = {SLT},
+  bibtex_show = {true},
+  title       = {Efficient Training of Self-Supervised Speech Foundation Models on a Compute Budget},
+  author      = {Andy T. Liu and Yi-Cheng Lin and Haibin Wu and Stefan Winkler and Hung-yi Lee},
+  booktitle   = {2024 IEEE Spoken Language Technology Workshop (SLT)},
+  year        = {2024},
+  pages       = {1--8},
+  doi         = {10.1109/SLT61566.2024.10832361},
+  arxiv       = {2409.16295},
+  abstract    = {Despite their impressive success, training foundation models remains computationally costly. This paper investigates how to efficiently train speech foundation models with self-supervised learning (SSL) under a limited compute budget. We examine critical factors in SSL that impact the budget, including model architecture, model size, and data size. Our goal is to make analytical steps toward understanding the training dynamics of speech foundation models. We benchmark SSL objectives in an entirely comparable setting and find that other factors contribute more significantly to the success of SSL. Our results show that slimmer model architectures outperform common small architectures under the same compute and parameter budget. We demonstrate that the size of the pre-training data remains crucial, even with data augmentation during SSL training, as performance suffers when iterating over limited data. Finally, we identify a trade-off between model size and data size, highlighting an optimal model size for a given compute budget.}
+}
+
+@inproceedings{wu2024codecsuperb,
+  abbr        = {SLT},
+  bibtex_show = {true},
+  title       = {Codec-SUPERB @ SLT 2024: A lightweight benchmark for neural audio codec models},
+  author      = {Haibin Wu and Xuanjun Chen and Yi-Cheng Lin and Kaiwei Chang and Jiawei Du and Ke-Han Lu and Alexander H. Liu and Ho-Lam Chung and Yuan-Kuei Wu and Dongchao Yang and Songxiang Liu and Yi-Chiao Wu and Xu Tan and James Glass and Shinji Watanabe and Hung-yi Lee},
+  booktitle   = {2024 IEEE Spoken Language Technology Workshop (SLT)},
+  year        = {2024},
+  pages       = {570--577},
+  doi         = {10.1109/SLT61566.2024.10832364},
+  arxiv       = {2409.14085},
+  abstract    = {Neural audio codec models are becoming increasingly important as they serve as tokenizers for audio, enabling efficient transmission or facilitating speech language modeling. The ideal neural audio codec should maintain content, paralinguistics, speaker characteristics, and audio information even at low bitrates. Recently, numerous advanced neural codec models have been proposed. However, codec models are often tested under varying experimental conditions. As a result, we introduce the Codec-SUPERB challenge at SLT 2024, designed to facilitate fair and lightweight comparisons among existing codec models and inspire advancements in the field. This challenge brings together representative speech applications and objective metrics, and carefully selects license-free datasets, sampling them into small sets to reduce evaluation computation costs. This paper presents the challenge's rules, datasets, five participant systems, results, and findings.}
+}
+
+@inproceedings{lin2024spoken,
+  abbr        = {SLT},
+  bibtex_show = {true},
+  title       = {Spoken Stereoset: On Evaluating Social Bias Toward Speaker in Speech Large Language Models},
+  author      = {Yi-Cheng Lin and Wei-Chih Chen and Hung-yi Lee},
+  booktitle   = {2024 IEEE Spoken Language Technology Workshop (SLT)},
+  year        = {2024},
+  pages       = {871--878},
+  doi         = {10.1109/SLT61566.2024.10832259},
+  arxiv       = {2408.07665},
+  abstract    = {Warning: This paper may contain texts with uncomfortable content. Large Language Models (LLMs) have achieved remarkable performance in various tasks, including those involving multimodal data like speech. However, these models often exhibit biases due to the nature of their training data. Recently, more Speech Large Language Models (SLLMs) have emerged, underscoring the urgent need to address these biases. This study introduces Spoken Stereoset, a dataset specifically designed to evaluate social biases in SLLMs. By examining how different models respond to speech from diverse demographic groups, we aim to identify these biases. Our experiments reveal significant insights into their performance and bias levels. The findings indicate that while most models show minimal bias, some still exhibit slightly stereotypical or anti-stereotypical tendencies.},
+  code        = {https://github.com/dlion168/spoken_stereoset},
+  selected    = {true}
+}
+
+@inproceedings{ren2024emocodec,
+  abbr        = {APSIPA},
+  bibtex_show = {true},
+  title       = {EMO-Codec: An In-Depth Look at Emotion Preservation capacity of Legacy and Neural Codec Models With Subjective and Objective Evaluations},
+  author      = {Wenze Ren and Yi-Cheng Lin and Huang-Cheng Chou and Haibin Wu and Yi-Chiao Wu and Chi-Chun Lee and Hung-yi Lee and Yu Tsao},
+  booktitle   = {2024 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
+  year        = {2024},
+  pages       = {1--6},
+  doi         = {10.1109/APSIPAASC63619.2025.10849259},
+  arxiv       = {2407.15458},
+  abstract    = {The neural codec model reduces speech data transmission delay and serves as the foundational tokenizer for speech language models (speech LMs). Preserving emotional information in codecs is crucial for effective communication and context understanding. However, there is a lack of studies on emotion loss in existing codecs. This paper evaluates neural and legacy codecs using subjective and objective methods on emotion datasets like IEMOCAP. Our study identifies which codecs best preserve emotional information under various bitrate scenarios. We found that training codec models with both English and Chinese data had limited success in retaining emotional information in Chinese. Additionally, resynthesizing speech through these codecs degrades the performance of speech emotion recognition (SER), particularly for emotions like sadness, depression, fear, and disgust. Human listening tests confirmed these findings. This work guides future speech technology developments to ensure new codecs maintain the integrity of emotional information in speech.}
+}
+
+@inproceedings{lin2024listen,
+  abbr        = {SLT},
+  bibtex_show = {true},
+  title       = {Listen and Speak Fairly: A Study on Semantic Gender Bias in Speech Integrated Large Language Models},
+  author      = {Yi-Cheng Lin and Tzu-Quan Lin and Chih-Kai Yang and Ke-Han Lu and Wei-Chih Chen and Chun-Yi Kuan and Hung-yi Lee},
+  booktitle   = {2024 IEEE Spoken Language Technology Workshop (SLT)},
+  year        = {2024},
+  pages       = {439--446},
+  doi         = {10.1109/SLT61566.2024.10832317},
+  arxiv       = {2407.06957},
+  abstract    = {Speech Integrated Large Language Models (SILLMs) combine large language models with speech perception to perform diverse tasks, such as emotion recognition to speaker verification, demonstrating universal audio understanding capability. However, these models may amplify biases present in training data, potentially leading to biased access to information for marginalized groups. This work introduces a curated spoken bias evaluation toolkit and corresponding dataset. We evaluate gender bias in SILLMs across four semantic-related tasks: speech-to-text translation (STT), spoken coreference resolution (SCR), spoken sentence continuation (SSC), and spoken question answering (SQA). Our analysis reveals that bias levels are language-dependent and vary with different evaluation methods. Our findings emphasize the necessity of employing multiple approaches to comprehensively assess biases in SILLMs, providing insights for developing fairer SILLM systems.},
+  code        = {https://github.com/dlion168/Listen-and-Speak-Fairly},
+  selected    = {true}
+}
+
+@inproceedings{lin2024emobias,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {Emo-bias: A Large Scale Evaluation of Social Bias on Speech Emotion Recognition},
+  author      = {Yi-Cheng Lin and Haibin Wu and Huang-Cheng Chou and Chi-Chun Lee and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2024},
+  year        = {2024},
+  pages       = {4633--4637},
+  doi         = {10.21437/Interspeech.2024-1073},
+  arxiv       = {2406.05065},
+  abstract    = {The rapid growth of Speech Emotion Recognition (SER) has diverse global applications, from improving human-computer interactions to aiding mental health diagnostics. However, SER models might contain social bias toward gender, leading to unfair outcomes. This study analyzes gender bias in SER models trained with Self-Supervised Learning (SSL) at scale, exploring factors influencing it. SSL-based SER models are chosen for their cutting-edge performance. Our research pioneering research gender bias in SER from both upstream model and data perspectives. Our findings reveal that females exhibit slightly higher overall SER performance than males. Modified CPC and XLS-R, two well-known SSL models, notably exhibit significant bias. Moreover, models trained with Mandarin datasets display a pronounced bias toward valence. Lastly, we find that gender-wise emotion distribution differences in training data significantly affect gender bias, while upstream model representation has a limited impact.}
+}
+
+@inproceedings{lin2024social,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {On the social bias of speech self-supervised models},
+  author      = {Yi-Cheng Lin and Tzu-Quan Lin and Hsi-Che Lin and Andy T. Liu and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2024},
+  year        = {2024},
+  pages       = {4638--4642},
+  doi         = {10.21437/Interspeech.2024-454},
+  arxiv       = {2406.04997},
+  abstract    = {Self-supervised learning (SSL) speech models have achieved remarkable performance in various tasks, yet the biased outcomes, especially affecting marginalized groups, raise significant concerns. Social bias refers to the phenomenon where algorithms potentially amplify disparate properties between social groups present in the data used for training. Bias in SSL models can perpetuate injustice by automating discriminatory patterns and reinforcing inequitable systems. This work reveals that prevalent SSL models inadvertently acquire biased associations. We probe how various factors, such as model architecture, size, and training methodologies, influence the propagation of social bias within these models. Finally, we explore the efficacy of debiasing SSL models through regularization techniques, specifically via model compression. Our findings reveal that employing techniques such as row-pruning and training wider, shallower models can effectively mitigate social bias within SSL model.},
+  award       = {Best Paper Runner-Up},
+  selected    = {true}
+}
+
+@inproceedings{wu2024codecsuperbb,
+  abbr        = {ACL},
+  bibtex_show = {true},
+  title       = {Codec-SUPERB: An In-Depth Analysis of Sound Codec Models},
+  author      = {Haibin Wu and Ho-Lam Chung and Yi-Cheng Lin and Yuan-Kuei Wu and Xuanjun Chen and Yu-Chi Pai and Hsiu-Hsuan Wang and Kai-Wei Chang and Alexander H. Liu and Hung-yi Lee},
+  booktitle   = {Findings of the Association for Computational Linguistics: ACL 2024},
+  year        = {2024},
+  pages       = {10330--10348},
+  doi         = {10.18653/v1/2024.findings-acl.616},
+  arxiv       = {2402.13071},
+  abstract    = {The sound codec's dual roles in minimizing data transmission latency and serving as tokenizers underscore its critical importance. Recent years have witnessed significant developments in codec models. The ideal sound codec should preserve content, paralinguistics, speakers, and audio information. However, the question of which codec achieves optimal sound information preservation remains unanswered, as in different papers, models are evaluated on their selected experimental settings. This study introduces Codec-SUPERB, an acronym for Codec sound processing Universal PERformance Benchmark. It is an ecosystem designed to assess codec models across representative sound applications and signal-level metrics rooted in sound domain knowledge.Codec-SUPERB simplifies result sharing through an online leaderboard, promoting collaboration within a community-driven benchmark database, thereby stimulating new development cycles for codecs. Furthermore, we undertake an in-depth analysis to offer insights into codec models from both application and signal perspectives, diverging from previous codec papers mainly concentrating on signal-level comparisons. Finally, we will release codes, the leaderboard, and data to accelerate progress within the community.},
+  code        = {https://github.com/voidful/Codec-SUPERB},
+  selected    = {true}
+}
+
+
+%% ========== Accepted; proceedings not yet published (fill pages + doi later) ==========
+
+@inproceedings{wei2026speaker,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {Speaker Identity in Non-Verbal Vocalizations: Conditional Distillation and Mixture of Experts Approach},
+  author      = {Tzu-Chieh Wei and Yi-Cheng Lin and Huang-Cheng Chou and Kuan-Yu Chen and Hsin-Yen Sung and Shrikanth Narayanan and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2026},
+  year        = {2026},
+  arxiv       = {2606.21215},
+  abstract    = {As expressive text-to-speech (TTS) and voice conversion (VC) systems increasingly generate non-verbal vocalizations (NVVs) to enhance naturalness, reliable speaker verification (SV) becomes essential to objectively assess identity consistency across both verbal and non-verbal segments. Yet current SV systems generalize poorly to NVVs, and fine-tuning on NVV data causes catastrophic forgetting of speech performance. We present the first systematic study across 10 NVV types and propose a framework combining frozen Data2Vec self-supervised features with ECAPA-TDNN, enhanced by a Mixture of Experts (MoE) module with learned domain-aware routing. A conditional distillation loss on speech inputs via a pretrained teacher retains speech-to-speech accuracy, while a contrastive loss bridges the speech-NVV domain gap. Our method reduces speech-NVV EER from 38.93% to 22.66% over a pretrained baseline, and improves speech EER from 13.17% to 9.24% via distillation.}
+}
+
+@inproceedings{tsai2026false,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {The False Resonance: A Critical Examination of Emotion Embedding Similarity for Speech Generation Evaluation},
+  author      = {Yun-Shao Tsai and Yi-Cheng Lin and Huang-Cheng Chou and Tzu-Wen Hsu and Yun-Man Hsu and Chun Wei Chen and Shrikanth Narayanan and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2026},
+  year        = {2026},
+  arxiv       = {2604.26347},
+  abstract    = {Objective metrics for emotional expressiveness are vital for speech generation, particularly in expressive synthesis and voice conversion requiring emotional prosody transfer. To quantify this, the field widely relies on emotion similarity between reference and generated samples. This approach computes cosine similarity of embeddings from encoders like emotion2vec, assuming they capture affective cues despite linguistic and speaker variations. We challenge this assumption through controlled adversarial tasks and human alignment tests. Despite high classification accuracy, these latent spaces are unsuitable for zero-shot similarity evaluation. Representational limitations cause linguistic and speaker interference to overshadow emotional features, degrading discriminative ability. Consequently, the metric misaligns with human perception. This acoustic vulnerability reveals it rewards acoustic mimicry over genuine emotional synthesis.}
+}
+
+@inproceedings{chang2026taigispeech,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {TaigiSpeech: A Low-Resource Real-World Speech Intent Dataset and Preliminary Results with Scalable Data Mining In-the-Wild},
+  author      = {Kai-Wei Chang and Yi-Cheng Lin and Huang-Cheng Chou and Wenze Ren and Yu-Han Huang and Yun-Shao Tsai and Chien-Cheng Chen and Yu Tsao and Yuan-Fu Liao and Shrikanth Narayanan and James Glass and Hung-yi Lee},
+  booktitle   = {Proc. Interspeech 2026},
+  year        = {2026},
+  arxiv       = {2603.21478},
+  abstract    = {Speech technologies have advanced rapidly and serve diverse populations worldwide. However, many languages remain underrepresented due to limited resources. In this paper, we introduce TaigiSpeech, a real-world speech intent dataset in Taiwanese Taigi (aka Taiwanese Hokkien/Southern Min), which is a low-resource and primarily spoken language. The dataset is collected from older adults, comprising 21 speakers with a total of 3k utterances. It is designed for practical intent detection scenarios, including healthcare and home assistant applications. To address the scarcity of labeled data, we explore two data mining strategies with two levels of supervision: keyword match data mining with LLM pseudo labeling via an intermediate language and an audio-visual framework that leverages multimodal cues with minimal textual supervision. This design enables scalable dataset construction for low-resource and unwritten spoken languages. TaigiSpeech will be released under the CC BY 4.0 license to facilitate broad adoption and research on low-resource and unwritten languages. The project website and the dataset can be found on https://kwchang.org/taigispeech.}
+}
+
+@inproceedings{chen2026latentmark,
+  abbr        = {Interspeech},
+  bibtex_show = {true},
+  title       = {Latent-Mark: An Audio Watermark Robust to Neural Codec Compression},
+  author      = {Yen-Shan Chen and Shih-Yu Lai and Ying-Jung Tsou and Yi-Cheng Lin and Bing-Yu Chen and Yun-Nung Chen and Hung-yi Lee and Shang-Tse Chen},
+  booktitle   = {Proc. Interspeech 2026},
+  year        = {2026},
+  arxiv       = {2603.05310},
+  abstract    = {While existing audio watermarking techniques have achieved strong robustness against traditional digital signal processing (DSP) attacks, they remain vulnerable to neural compression. This occurs because modern neural audio codecs act as noise filters and discard the imperceptible waveform variations used in prior watermarking methods. To address this limitation, we propose Latent-Mark, the first zero-bit audio watermarking framework designed to survive neural codec compression. Our key insight is that robustness to the encode-decode process requires embedding the watermark within the codec's invariant latent space. We achieve this by optimizing the audio waveform to induce a detectable directional shift in its encoded latent representation, while constraining perturbations to align with the natural audio manifold to ensure imperceptibility. To prevent overfitting to a single codec's quantization rules, we introduce Cross-Codec Optimization, jointly optimizing the waveform across multiple surrogate codecs to target shared latent invariants. Extensive evaluations demonstrate robust zero-shot transferability to unseen neural codecs, achieving competitive resilience against traditional DSP attacks while preserving perceptual imperceptibility. We hope our work will inspire future research into universal watermarking frameworks capable of maintaining integrity across increasingly complex and diverse generative distortions.}
+}
+
+
+%% ========== Preprints (arXiv only) ==========
+
+@article{lin2026findings,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Findings of the First Teaching Monster Challenge: A Benchmark of Pedagogical Content Knowledge in AI Agents},
+  author      = {Yi-Cheng Lin and Yu-Kai Guo and Szu-Chi Chen and Bo-Han Feng and Yun-Man Hsu and Hsiang Hsieh and Yu-Jung Lin and Yue-Ling Wu and Jia-Kai Dong and An-Yu Cheng and Yu-Han Huang and Lok-Lam Ieong and Kuan-Yu Chen and Ming-Douo Tchouang and Shao-Hua Sun and Che Lin and Jian-Jiun Ding and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2608.08852},
+  year        = {2026},
+  arxiv       = {2608.08852},
+  abstract    = {AI agents can now solve problems, answer like subject experts, and generate long-form multimodal content. However, whether they can adapt a lesson to fit a specified learner, which education calls Pedagogical Content Knowledge (PCK), has not been benchmarked. To measure it, we introduce the Teaching Monster Challenge, the first instructional video generation benchmark to treat the learner persona as an explicit evaluation criterion. Each system is given a topic and a learner persona and must generate a complete instructional video. Every video is screened by an LLM-judge, ranked by crowd pairwise voting, and finalized by an expert panel. The first edition shows that today's systems handle the content well but are far weaker at presenting it and adapting it to the learner. The same process exposes a limit of automatic judging. The LLM-judge separates a clear low-performing tail but ranks the strongest systems poorly. The strongest systems receive nearly identical scores from the judge, so its ranking of them does not match human preference. Progress therefore requires not only better teaching systems but also better automatic judges, and we release the benchmark, rubric, and human judgments as a testbed for both.}
+}
+
+@article{li2026amrd,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {AMRD: Adaptive Multi-Teacher Relational Distillation for Lightweight Speech Emotion Recognition},
+  author      = {Yuqi Li and Yi-Cheng Lin and Xianglong Wang and Kuo Yang and Xiaoqin Feng and Yixuan Wang and Huiran Duan and Yingli Tian},
+  journal     = {arXiv preprint arXiv:2607.25289},
+  year        = {2026},
+  arxiv       = {2607.25289},
+  abstract    = {On-device speech emotion recognition (SER) is critical for real-time applications, yet large self-supervised models that excel at SER are too costly for edge devices. Multi-teacher knowledge distillation can compress them into a lightweight student, but two challenges remain: teacher reliability varies across batches, and logit-level distillation ignores inter-sample relational structure. We propose Adaptive Multi-teacher Relational Distillation (AMRD) to address both. A one-class SVM on each teacher's logit similarity matrix assigns per-batch weights favoring more coherent teachers. A relational distillation loss aligns teacher and student similarity matrices, capturing structure that logit matching misses. On IEMOCAP and CREMA-D datasets across four student architectures, AMRD outperforms single-teacher distillation baselines in most settings, and ablations confirm both components yield complementary gains.}
+}
+
+@article{tsai2026hearing,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Hearing Like Humans? Sound Symbolism and Perceptual Alignment in Speech Language Models},
+  author      = {Yun-Shao Tsai and Chun-Wei Chen and Chee-En Yu and Yi-Cheng Lin and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2607.10162},
+  year        = {2026},
+  arxiv       = {2607.10162},
+  abstract    = {Sound symbolism, the human tendency to map speech sounds to perceptual qualities such as roundness or sharpness, arises primarily from the acoustics of speech rather than spelling. Whether Speech Language Models (SLMs) share this tendency remains open, as prior evaluations rely on text or images rather than real speech. We study it using genuine human speech recordings, comparing model judgments against human data across the auditory, crossmodal, and visual components of the effect. We find that SLMs' auditory judgments align poorly with human perception and miss the acoustic cues, such as spectral tilt, that drive human intuitions, and open-weight models cannot reliably link a heard sound to its corresponding shape. With a visual-only control ruling out shape perception, the weakness localizes to how speech is represented, suggesting that perceptual alignment depends not on stronger vision but on speech representations that capture the cues humans hear.}
+}
+
+@article{chung2026escaping,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Escaping the Procrustean Bed: Groupwise Orthogonal Connectors for Audio-Language Models},
+  author      = {Ho-Lam Chung and Ke-Han Lu and Yi-Cheng Lin and Guan-Ting Lin and Yiming Chen and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2607.06014},
+  year        = {2026},
+  arxiv       = {2607.06014},
+  abstract    = {Audio-language models compress a speech encoder's output through a Querying Transformer (Q-Former) connector before feeding it to a large language model. We identify two failures in this compression. The connector's output vectors collapse to a single direction, and different speakers produce nearly indistinguishable outputs, with paralinguistic cues such as speaker identity, gender, and prosody lost along the way. Our method, ORCA, reverses this collapse by splitting the queries into groups whose outputs are constrained to point in different directions. On SAKURA multi-hop reasoning, ORCA gains 26.4 points over an identically trained 4B baseline, reaching 75.2% (vs. 49.0% for the 8B Audio Flamingo-3). At the connector level, the same change cuts query redundancy by 12x and raises cross-speaker variance by 75x.}
+}
+
+@article{lin2026fair,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Toward Fair Speech Technologies: A Comprehensive Survey of Bias and Fairness in Speech AI},
+  author      = {Yi-Cheng Lin and Yun-Shao Tsai and Kuan-Yu Chen and Hsiao-Ying Huang and Huang-Cheng Chou and Shrikanth Narayanan and Yu Tsao and Jian-Jiun Ding and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2605.01597},
+  year        = {2026},
+  arxiv       = {2605.01597},
+  abstract    = {Speech technologies are deployed in high-stakes settings, yet fairness concerns remain fragmented across tasks and disciplines. Existing surveys either adopt a general machine-learning perspective that overlooks speech-specific properties or focus on a single task, missing failure patterns shared across the speech domain. Synthesizing over 400 studies spanning generation and perception tasks and emerging speech-language models, this survey presents a unified framework that links formal fairness definitions to evaluation, diagnosis, and mitigation. We formalize seven fairness definitions adapted to the speech modality and organize the field's conceptual expansion through three paradigms: Robustness, Representation, and Governance. We then ground evaluation metrics in the mathematical cores of these definitions, organizing them into six families and mapping each family back to the definitions it operationalizes. We diagnose bias sources along the speech processing pipeline, surfacing speech-specific mechanisms such as channel bias as a demographic proxy and annotation subjectivity in emotion labels. We systematize mitigation strategies across four intervention stages, mapping each to the diagnosed sources. Finally, we identify open challenges and propose directions for future research.},
+  selected    = {true}
+}
+
+@article{chen2026move,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {MoVE: Translating Laughter and Tears via Mixture of Vocalization Experts in Speech-to-Speech Translation},
+  author      = {Szu-Chi Chen and I-Ning Tsai and Yi-Cheng Lin and Sung-Feng Huang and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2604.17435},
+  year        = {2026},
+  arxiv       = {2604.17435},
+  abstract    = {Recent Speech-to-Speech Translation (S2ST) systems achieve strong semantic accuracy yet consistently strip away non-verbal vocalizations (NVs), such as laughter and crying that convey pragmatic intent, which severely limits real-world utility. We address this via three contributions. First, we propose a synthesis pipeline for building scalable expressive datasets to overcome the data scarcity limitation. Second, we propose MoVE, a Mixture-of-LoRA-Experts architecture with expressive-specialized adapters and a soft-weighting router that blends experts for capturing hybrid expressive states. Third, we show pretrained AudioLLMs enable striking data efficiency: 30 minutes of curated data is enough for strong performance. On English-Chinese S2ST, while comparing with strong baselines, MoVE reproduces target NVs in 76% of cases and achieves the highest human-rated naturalness and emotional fidelity among all compared systems, where existing S2ST systems preserve at most 14% of NVs.},
+  website     = {https://47zzz.github.io/MoVE/}
+}
+
+@article{lin2026vibe,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {VIBE: Voice-Induced open-ended Bias Evaluation for Large Audio-Language Models via Real-World Speech},
+  author      = {Yi-Cheng Lin and Yusuke Hirota and Sung-Feng Huang and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2604.17248},
+  year        = {2026},
+  arxiv       = {2604.17248},
+  abstract    = {Large Audio-Language Models (LALMs) are increasingly integrated into daily applications, yet their generative biases remain underexplored. Existing speech fairness benchmarks rely on synthetic speech and Multiple-Choice Questions (MCQs), both offering a fragmented view of fairness. We propose VIBE, a framework that evaluates generative bias through open-ended tasks such as personalized recommendations, using human-recorded speech. Unlike MCQs, our method allows stereotypical associations to manifest organically without predefined options, making it easily extensible to new tasks. Evaluating 12 state-of-the-art LALMs reveals systematic biases in realistic scenarios. Both gender and accent cues trigger statistically significant distributional shifts, and bias magnitude is strongly task-dependent.}
+}
+
+@article{chen2026binding,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {The Binding Effect: Analyzing How Multi-Dimensional Cues Form Gender Bias in Instruction TTS},
+  author      = {Kuan-Yu Chen and Yi-Cheng Lin and Po-Chung Hsieh and Huang-Cheng Chou and Chih-Fan Hsu and Jeng-Lin Li and Hung-yi Lee and Jian-Jiun Ding},
+  journal     = {arXiv preprint arXiv:2603.20743},
+  year        = {2026},
+  arxiv       = {2603.20743},
+  abstract    = {Current bias evaluations in Instruction Text-to-Speech (ITTS) often rely on univariate testing, overlooking the compositional structure of social cues. In this work, we investigate gender bias by modeling prompts as combinations of Social Status, Career stereotypes, and Persona descriptors. Analyzing open-source ITTS models, we uncover systematic interaction effects where social dimensions modulate one another, creating complex bias patterns missed by univariate baselines. Crucially, our findings indicate that these biases extend beyond surface-level artifacts, demonstrating strong associations with the semantic priors of pre-trained text encoders and the skewed distributions inherent in training data. We further demonstrate that generic diversity prompting is insufficient to override these entrenched patterns, underscoring the need for compositional analysis to diagnose latent risks in generative speech.}
+}
+
+@article{lu2026auditory,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {How Auditory Knowledge in LLM Backbones Shapes Audio Language Models: A Holistic Evaluation},
+  author      = {Ke-Han Lu and Szu-Wei Fu and Chao-Han Huck Yang and Zhehuai Chen and Sung-Feng Huang and Chih-Kai Yang and Yi-Cheng Lin and Chi-Yuan Hsiao and Wenze Ren and En-Pei Hu and Yu-Han Huang and An-Yu Cheng and Cheng-Han Chiang and Yu Tsao and Yu-Chiang Frank Wang and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2603.19195},
+  year        = {2026},
+  arxiv       = {2603.19195},
+  abstract    = {Large language models (LLMs) have been widely used as knowledge backbones of Large Audio Language Models (LALMs), yet how much auditory knowledge they encode through text-only pre-training and how this affects downstream performance remains unclear. We study this gap by comparing different LLMs under two text-only and one audio-grounded setting: (1) direct probing on AKB-2000, a curated benchmark testing the breadth and depth of auditory knowledge; (2) cascade evaluation, where LLMs reason over text descriptions from an audio captioner; and (3) audio-grounded evaluation, where each LLM is fine-tuned into a Large Audio Language Model (LALM) with an audio encoder. Our findings reveal that auditory knowledge varies substantially across families, and text-only results are strongly correlated with audio performance. Our work provides empirical grounding for a comprehensive understanding of LLMs in audio research.},
+  website     = {https://kehanlu.github.io/AKB}
+}
+
+@article{ren2026mosbias,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {MOS-Bias: From Hidden Gender Bias to Gender-Aware Speech Quality Assessment},
+  author      = {Wenze Ren and Yi-Cheng Lin and Wen-Chin Huang and Erica Cooper and Ryandhimas E. Zezario and Hsin-Min Wang and Hung-yi Lee and Yu Tsao},
+  journal     = {arXiv preprint arXiv:2603.10723},
+  year        = {2026},
+  arxiv       = {2603.10723},
+  abstract    = {The Mean Opinion Score (MOS) serves as the standard metric for speech quality assessment, yet biases in human annotations remain underexplored. We conduct the first systematic analysis of gender bias in MOS, revealing that male listeners consistently assign higher scores than female listeners--a gap that is most pronounced in low-quality speech and gradually diminishes as quality improves. This quality-dependent structure proves difficult to eliminate through simple calibration. We further demonstrate that automated MOS models trained on aggregated labels exhibit predictions skewed toward male standards of perception. To address this, we propose a gender-aware model that learns gender-specific scoring patterns through abstracting binary group embeddings, thereby improving overall and gender-specific prediction accuracy. This study establishes that gender bias in MOS constitutes a systematic, learnable pattern demanding attention in equitable speech evaluation.}
+}
+
+@article{lin2026contrastive,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {How Contrastive Decoding Enhances Large Audio Language Models?},
+  author      = {Tzu-Quan Lin and Wei-Ping Huang and Yi-Cheng Lin and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2603.09232},
+  year        = {2026},
+  arxiv       = {2603.09232},
+  abstract    = {While Contrastive Decoding (CD) has proven effective at enhancing Large Audio Language Models (LALMs), the underlying mechanisms driving its success and the comparative efficacy of different strategies remain unclear. This study systematically evaluates four distinct CD strategies across diverse LALM architectures. We identify Audio-Aware Decoding and Audio Contrastive Decoding as the most effective methods. However, their impact varies significantly by model. To explain this variability, we introduce a Transition Matrix framework to map error pattern shifts during inference. Our analysis demonstrates that CD reliably rectifies errors in which models falsely claim an absence of audio or resort to uncertainty-driven guessing. Conversely, it fails to correct flawed reasoning or confident misassertions. Ultimately, these findings provide a clear guideline for determining which LALM architectures are most suitable for CD enhancement based on their baseline error profiles.}
+}
+
+@article{xie2026twsoundk,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {TW-Sound580K: A Regional Audio-Text Dataset with Verification-Guided Curation for Localized Audio-Language Modeling},
+  author      = {Hao-Hui Xie and Ho-Lam Chung and Yi-Cheng Lin and Ke-Han Lu and Wenze Ren and Xie Chen and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2603.05094},
+  year        = {2026},
+  arxiv       = {2603.05094},
+  abstract    = {Large Audio-Language Models (LALMs) typically struggle with localized dialectal prosody due to the scarcity of specialized corpora. We present TW-Sound580K, a Taiwanese audio-text instruction dataset developed through a Verify-Generate-Critique (VGC) protocol. This pipeline leverages Dual-ASR validation to filter 522K raw clips, subsequently expanding them into 580,000 high-fidelity instruction pairs using a teacher model. The dataset's utility is demonstrated through Tai-LALM, which fine-tunes a DeSTA 2.5-Audio-initialized backbone and incorporates a dynamic Dual-ASR Arbitration strategy to optimize transcription selection during inference. On the TAU Benchmark, Tai-LALM reaches 49.1% accuracy, marking a 6.5% absolute improvement over the zero-shot baseline (42.6% with ASR text conditioning). This confirms that integrating regional corpora with rigorous curation and dynamic arbitration significantly enhances LALM performance on localized speech.}
+}
+
+@article{chen2025cantoasr,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {CantoASR: Prosody-Aware ASR-LALM Collaboration for Low-Resource Cantonese},
+  author      = {Dazhong Chen and Yi-Cheng Lin and Yuchen Huang and Ziwei Gong and Di Jiang and Zeying Xie and Yi R. and  Fung},
+  journal     = {arXiv preprint arXiv:2511.04139},
+  year        = {2025},
+  arxiv       = {2511.04139},
+  abstract    = {Automatic speech recognition (ASR) is critical for language accessibility, yet low-resource Cantonese remains challenging due to limited annotated data, six lexical tones, tone sandhi, and accent variation. Existing ASR models, such as Whisper, often suffer from high word error rates. Large audio-language models (LALMs), in contrast, can leverage broader contextual reasoning but still require explicit tonal and prosodic acoustic cues. We introduce CantoASR, a collaborative ASR-LALM error correction framework that integrates forced alignment for acoustic feature extraction, a LoRA-finetuned Whisper for improved tone discrimination, and an instruction-tuned Qwen-Audio for prosody-aware correction. Evaluations on spontaneous Cantonese data show substantial CER gains over Whisper-Large-V3. These findings suggest that integrating acoustic cues with LALM reasoning provides a scalable strategy for low-resource tonal and dialectal ASR.}
+}
+
+@article{hsu2025breezyvoice,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {BreezyVoice: Adapting TTS for Taiwanese Mandarin with Enhanced Polyphone Disambiguation -- Challenges and Insights},
+  author      = {Chan-Jan Hsu and Yi-Cheng Lin and Chia-Chun Lin and Wei-Chih Chen and Ho Lam Chung and Chen-An Li and Yi-Chang Chen and Chien-Yu Yu and Ming-Ji Lee and Chien-Cheng Chen and Ru-Heng Huang and Hung-yi Lee and Da-Shan Shiu},
+  journal     = {arXiv preprint arXiv:2501.17790},
+  year        = {2025},
+  arxiv       = {2501.17790},
+  abstract    = {We present BreezyVoice, a Text-to-Speech (TTS) system specifically adapted for Taiwanese Mandarin, highlighting phonetic control abilities to address the unique challenges of polyphone disambiguation in the language. Building upon CosyVoice, we incorporate a $S^{3}$ tokenizer, a large language model (LLM), an optimal-transport conditional flow matching model (OT-CFM), and a grapheme to phoneme prediction model, to generate realistic speech that closely mimics human utterances. Our evaluation demonstrates BreezyVoice's superior performance in both general and code-switching contexts, highlighting its robustness and effectiveness in generating high-fidelity speech. Additionally, we address the challenges of generalizability in modeling long-tail speakers and polyphone disambiguation. Our approach significantly enhances performance and offers valuable insights into the workings of neural codec TTS systems.}
+}
+
+@article{yang2024building,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Building a Taiwanese Mandarin Spoken Language Model: A First Attempt},
+  author      = {Chih-Kai Yang and Yu-Kuan Fu and Chen-An Li and Yi-Cheng Lin and Yu-Xiang Lin and Wei-Chih Chen and Ho Lam Chung and Chun-Yi Kuan and Wei-Ping Huang and Ke-Han Lu and Tzu-Quan Lin and Hsiu-Hsuan Wang and En-Pei Hu and Chan-Jan Hsu and Liang-Hsuan Tseng and I-Hsiang Chiu and Ulin Sanga and Xuanjun Chen and Po-chun Hsu and Shu-wen Yang and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2411.07111},
+  year        = {2024},
+  arxiv       = {2411.07111},
+  abstract    = {This technical report presents our initial attempt to build a spoken large language model (LLM) for Taiwanese Mandarin, specifically tailored to enable real-time, speech-to-speech interaction in multi-turn conversations. Our end-to-end model incorporates a decoder-only transformer architecture and aims to achieve seamless interaction while preserving the conversational flow, including full-duplex capabilities allowing simultaneous speaking and listening. The paper also details the training process, including data preparation with synthesized dialogues and adjustments for real-time interaction. We also developed a platform to evaluate conversational fluency and response coherence in multi-turn dialogues. We hope the release of the report can contribute to the future development of spoken LLMs in Taiwanese Mandarin.}
+}
+
+@article{wu2024audio,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Towards audio language modeling -- an overview},
+  author      = {Haibin Wu and Xuanjun Chen and Yi-Cheng Lin and Kai-wei Chang and Ho-Lam Chung and Alexander H. Liu and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2402.13236},
+  year        = {2024},
+  arxiv       = {2402.13236},
+  abstract    = {Neural audio codecs are initially introduced to compress audio data into compact codes to reduce transmission latency. Researchers recently discovered the potential of codecs as suitable tokenizers for converting continuous audio into discrete codes, which can be employed to develop audio language models (LMs). Numerous high-performance neural audio codecs and codec-based LMs have been developed. The paper aims to provide a thorough and systematic overview of the neural audio codec models and codec-based LMs.},
+  selected    = {true}
+}
+
+@article{dong2026edupanel,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {EduPanel: A Three-Agent LLM Judge for Teaching Videos -- Reliability, Complementarity, and Human Trust Calibration},
+  author      = {Jia-Kai Dong and Yi-Cheng Lin and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2607.18529},
+  year        = {2026},
+  arxiv       = {2607.18529},
+  abstract    = {Teaching videos are becoming a major medium for education, creating a growing need for scalable evaluation of their pedagogical quality. Existing automatic judges do not fully address this setting because teaching quality depends on multimodal evidence and should be evaluated with respect to the intended learner rather than as a universal property. We present EduPanel, a rubric-grounded, learner-conditioned LLM judge that decomposes evaluation across specialized agents to produce interpretable assessments for different aspects of teaching quality. Across expert studies, architecture ablations, and learner-persona analyses, EduPanel achieves reliability comparable to a median human expert. In expert evaluation, its feedback improves scoring accuracy (MAE 0.87 to 0.73), while experts remain able to detect unreliable outputs (AUC = 0.77) instead of accepting them blindly. These results suggest that EduPanel can serve as effective assistants for educational evaluation rather than replacements for human experts.}
 }

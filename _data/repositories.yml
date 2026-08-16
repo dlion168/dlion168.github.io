@@ -1,14 +1,18 @@
+# GitHub profile cards shown at the top of /repositories/
 github_users:
-  - torvalds
-  - alshedivat
+  - dlion168
 
 repo_description_lines_max: 2
 
+# Repository cards. Ordered roughly by how central they are to your work.
+# Only the first two are under your own account; the rest are collaborations
+# where you are an author on the paper — that is legitimate to list, and the
+# cards make the collaboration visible. Remove any you would rather not show.
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - dlion168/Listen-and-Speak-Fairly # SLT 2024 — semantic gender bias in speech-integrated LLMs
+  - dlion168/spoken_stereoset # SLT 2024 — social bias toward speakers in speech LLMs
+  - voidful/Codec-SUPERB # ACL Findings 2024 / SLT 2024 — neural audio codec benchmark
+  - kehanlu/DeSTA2.5-Audio # TASLP — general-purpose large audio language model
+  - MiuLab/MultiAgent-Survey # EMNLP 2025 — creativity in LLM-based multi-agent systems
+  - johnwei0325/Multi-Distillation-from-Speech-and-Music-Representation-Models # ASRU 2025
+  - Jeffabcd/Meta-PerSER # INTERSPEECH 2025 — few-shot listener-personalized SER

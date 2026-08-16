@@ -1,7 +1,46 @@
----
-permalink: /robots.txt
----
-User-agent: *
-Disallow:
+# robots.txt — dlion168.github.io
+#
+# ⚠️ ORIGIN SCOPING: robots.txt is per origin (scheme+host+port), per RFC 9309.
+# Crawlers only ever fetch https://dlion168.github.io/robots.txt — i.e. THIS file,
+# served from the dlion168.github.io repo. A robots.txt placed in a project repo
+# (served at /some-project/robots.txt) is never requested by anyone.
+# So this one file governs every project page you host under this account.
+#
+# Policy: allow everything. For an academic whose goal is discoverability there is
+# no upside to blocking. Note in particular that the retrieval bots (OAI-SearchBot,
+# Claude-SearchBot, PerplexityBot) are the ones that cite you with a link back —
+# blocking OAI-SearchBot removes you from ChatGPT search answers entirely.
 
-Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://dlion168.github.io/sitemap.xml
+
+# ── If you ever host demo pages as separate project repos, list their sitemaps here.
+#    Their own robots.txt files are unreachable, so this is the only place they can
+#    be declared (or submit them directly in Google Search Console).
+# Sitemap: https://dlion168.github.io/some-demo-page/sitemap.xml
+
+# ── OPTIONAL: "in the answers, but not in the training corpus" posture.
+#    Uncomment to opt out of bulk training crawls while staying fully visible to
+#    retrieval/answer engines. Blocking Google-Extended provably costs nothing in
+#    Google Search or AI Overviews (per Google's own docs).
+#    My recommendation is to leave this commented out.
+#
+# User-agent: GPTBot
+# Disallow: /
+#
+# User-agent: ClaudeBot
+# Disallow: /
+#
+# User-agent: Google-Extended
+# Disallow: /
+#
+# User-agent: Applebot-Extended
+# Disallow: /
+#
+# User-agent: meta-externalagent
+# Disallow: /
+#
+# User-agent: CCBot
+# Disallow: /

@@ -1,14 +1,41 @@
-# this file contains the social media links and usernames of the author
-# the socials will be displayed in the order they are defined here
-# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
-email: you@example.com # your email address
-inspirehep_id: 1010907 # Inspire HEP author ID
-rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
-# wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
-# whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
-custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-  title: Custom Social
-  url: https://www.alberteinstein.com/
+# Social / identity links, rendered as icons under your profile photo.
+#
+# ⚠️ KEY NAMES ARE NOT FREE-FORM. jekyll-socials only understands the keys in its
+# own table (orcid_id, scholar_userid, semanticscholar_id, arxiv_id, dblp_url,
+# github_username, linkedin_username, cv_pdf, email, …). Any OTHER key is treated
+# as a "custom social" and MUST be a mapping with logo/title/url — give it a plain
+# string and the build dies with:
+#     undefined method `split' for nil  (jekyll-socials.rb:217)
+# That is exactly what `huggingface_id: dlion168` did, so Hugging Face is defined
+# as a custom social below.
+#
+# This file is also the human half of the identity graph. The machine half is the
+# "sameAs" array built by _plugins/scholar_meta.rb, which reads this same file —
+# add an ID here and it appears in the homepage JSON-LD automatically.
+
+cv_pdf: /assets/pdf/CV_Yi-Cheng_Lin.pdf
+email: f12942075@ntu.edu.tw
+
+orcid_id: 0009-0007-3994-6433
+scholar_userid: N1UuQSUAAAAJ
+semanticscholar_id: 2284761645
+arxiv_id: lin_y_10
+github_username: dlion168
+linkedin_username: yclin201220
+
+huggingface:
+  logo: https://huggingface.co/favicon.ico
+  title: Hugging Face
+  url: https://huggingface.co/dlion168
+
+# ── Fill in as each profile gets cleaned up ────────────────────────────
+# dblp_url: https://dblp.org/pid/XXX/XXXX.html   # after dblp@dagstuhl.de splits pid 76/4524
+# openalex_id: AXXXXXXXXX                        # after the OpenAlex merge goes through
+#   (openalex_id is not a jekyll-socials key — it renders no icon, but
+#    _plugins/scholar_meta.rb still picks it up for sameAs. That is intentional.)
+
+# rss_icon is omitted on purpose: you have no blog, so the feed would be empty.
+# Note "rss_icon: false" does NOT hide it — the key must be absent.
+
+# Not applicable — INSPIRE-HEP is high-energy physics only.
+# inspirehep_id:
