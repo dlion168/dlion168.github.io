@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers accepted to **Findings of ACL 2026**: [Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech Recognition](/bibliography/lin2025pseudoreal/), [On the Fallacy of Global Token Perplexity in Spoken Language Model Evaluation](/bibliography/hsu2026fallacy/).
+Two papers accepted to **Findings of ACL 2026**: [Pseudo2Real](/bibliography/lin2025pseudoreal/), [Global Token Perplexity](/bibliography/hsu2026fallacy/).

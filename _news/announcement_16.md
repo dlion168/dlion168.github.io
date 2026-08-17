@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [How Contrastive Decoding Enhances Large Audio Language Models](/bibliography/lin2026contrastive/) ([arXiv:2603.09232](https://arxiv.org/abs/2603.09232)).
+Preprint released: [Contrastive Decoding in Audio LLMs](/bibliography/lin2026contrastive/) ([arXiv:2603.09232](https://arxiv.org/abs/2603.09232)).

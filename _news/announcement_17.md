@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [TW-Sound580K: A Regional Audio-Text Dataset with Verification-Guided Curation for Localized Audio-Language Modeling](/bibliography/xie2026twsoundk/) ([arXiv:2603.05094](https://arxiv.org/abs/2603.05094)).
+Preprint released: [TW-Sound580K](/bibliography/xie2026twsoundk/) ([arXiv:2603.05094](https://arxiv.org/abs/2603.05094)).

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [VIBE: Voice-Induced open-ended Bias Evaluation for Large Audio-Language Models via Real-World Speech](/bibliography/lin2026vibe/) ([arXiv:2604.17248](https://arxiv.org/abs/2604.17248)).
+Preprint released: [VIBE](/bibliography/lin2026vibe/) ([arXiv:2604.17248](https://arxiv.org/abs/2604.17248)).

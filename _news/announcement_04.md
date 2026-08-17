@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [Hearing Like Humans? Sound Symbolism and Perceptual Alignment in Speech Language Models](/bibliography/tsai2026hearing/) ([arXiv:2607.10162](https://arxiv.org/abs/2607.10162)).
+Preprint released: [Hearing Like Humans?](/bibliography/tsai2026hearing/) ([arXiv:2607.10162](https://arxiv.org/abs/2607.10162)).

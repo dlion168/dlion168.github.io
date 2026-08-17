@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [How Auditory Knowledge in LLM Backbones Shapes Audio Language Models](/bibliography/lu2026auditory/) ([arXiv:2603.19195](https://arxiv.org/abs/2603.19195)).
+Preprint released: [Auditory Knowledge in LLM Backbones](/bibliography/lu2026auditory/) ([arXiv:2603.19195](https://arxiv.org/abs/2603.19195)).

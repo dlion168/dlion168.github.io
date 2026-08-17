@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Codec-SUPERB: An In-Depth Analysis of Sound Codec Models](/bibliography/wu2024codecsuperbb/) accepted to **Findings of ACL 2024** — an in-depth analysis of sound codec models.
+[Codec-SUPERB](/bibliography/wu2024codecsuperbb/) accepted to **Findings of ACL 2024** — an in-depth analysis of sound codec models.

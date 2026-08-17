@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [Towards audio language modeling -- an overview](/bibliography/wu2024audio/) ([arXiv:2402.13236](https://arxiv.org/abs/2402.13236)).
+Preprint released: [Towards audio language modeling](/bibliography/wu2024audio/) ([arXiv:2402.13236](https://arxiv.org/abs/2402.13236)).

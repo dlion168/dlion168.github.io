@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[EMO-Codec: An In-Depth Look at Emotion Preservation capacity of Legacy and Neural Codec Models With Subjective and Objective Evaluations](/bibliography/ren2024emocodec/) presented at **APSIPA ASC 2024**, examining how well legacy and neural codecs preserve emotion.
+[EMO-Codec](/bibliography/ren2024emocodec/) presented at **APSIPA ASC 2024**, examining how well legacy and neural codecs preserve emotion.

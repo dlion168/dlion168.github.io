@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [MOS-Bias: From Hidden Gender Bias to Gender-Aware Speech Quality Assessment](/bibliography/ren2026mosbias/) ([arXiv:2603.10723](https://arxiv.org/abs/2603.10723)).
+Preprint released: [MOS-Bias](/bibliography/ren2026mosbias/) ([arXiv:2603.10723](https://arxiv.org/abs/2603.10723)).
