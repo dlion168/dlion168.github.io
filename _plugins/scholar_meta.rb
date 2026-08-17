@@ -202,7 +202,10 @@ module ScholarMeta
   # Done as injected CSS instead of shadowing the gem's _layouts/bib.liquid, for
   # the same reason the meta tags are injected here: overriding a gem file means
   # re-auditing it on every theme upgrade.
-  BUTTON_ICON_CSS = <<~CSS.freeze
+  # NOTE: single-quoted heredoc. With <<~CSS, Ruby eats the CSS escapes -
+  # \e974 becomes a literal ESC byte and \f09b a form feed, so the glyphs
+  # silently render as nothing.
+  BUTTON_ICON_CSS = <<~'CSS'.freeze
     <style>
       a.btn[href*="github.com"]::before,
       a.btn[href^="https://doi.org/"]::before,
