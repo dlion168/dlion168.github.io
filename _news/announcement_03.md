@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [EduPanel](/bibliography/dong2026edupanel/) ([arXiv:2607.18529](https://arxiv.org/abs/2607.18529)).
+Three preprints released: [EduPanel](/bibliography/dong2026edupanel/), [Hearing Like Humans?](/bibliography/tsai2026hearing/), [Escaping the Procrustean Bed](/bibliography/chung2026escaping/).
