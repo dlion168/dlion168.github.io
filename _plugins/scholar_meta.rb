@@ -193,6 +193,42 @@ module ScholarMeta
     %(<script type="application/ld+json">\n#{JSON.pretty_generate(doc)}\n</script>)
   end
 
+
+  # Icons on the publication buttons. al-folio renders every button as a bare
+  # <a class="btn btn-sm z-depth-0">DOI|arXiv|Code</a> with no per-type class, so
+  # the only hook is the href. Font Awesome 7 and academicons are already loaded
+  # by the theme; we reuse their glyphs rather than shipping our own.
+  #
+  # Done as injected CSS instead of shadowing the gem's _layouts/bib.liquid, for
+  # the same reason the meta tags are injected here: overriding a gem file means
+  # re-auditing it on every theme upgrade.
+  BUTTON_ICON_CSS = <<~CSS.freeze
+    <style>
+      a.btn[href*="github.com"]::before,
+      a.btn[href^="https://doi.org/"]::before,
+      a.btn[href*="arxiv.org/abs"]::before {
+        margin-right: 0.4em;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+      a.btn[href*="github.com"]::before {
+        font-family: var(--fa-family-brands, "Font Awesome 7 Brands");
+        font-weight: 400;
+        content: "\f09b";
+      }
+      a.btn[href^="https://doi.org/"]::before {
+        font-family: "Academicons";
+        content: "\e97e";
+      }
+      a.btn[href*="arxiv.org/abs"]::before {
+        font-family: "Academicons";
+        content: "\e974";
+      }
+    </style>
+  CSS
+
   def inject(html, payload)
     return html unless html.include?("</head>")
     html.sub("</head>", "#{payload}\n</head>")
@@ -211,6 +247,11 @@ Jekyll::Hooks.register :pages, :post_render do |page|
       page.output = ScholarMeta.inject(page.output, payload)
     elsif page.url == "/" || page.url == "/index.html"
       page.output = ScholarMeta.inject(page.output, ScholarMeta.person_jsonld(site))
+    end
+
+    # Publication buttons appear on detail pages, /publications/ and the home page.
+    if entry || ["/", "/index.html", "/publications/"].include?(page.url)
+      page.output = ScholarMeta.inject(page.output, ScholarMeta::BUTTON_ICON_CSS)
     end
   rescue StandardError => e
     Jekyll.logger.warn "ScholarMeta:", "skipped #{page.url} — #{e.class}: #{e.message}"
