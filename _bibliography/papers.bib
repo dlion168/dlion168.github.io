@@ -48,6 +48,7 @@
   pages       = {1160--1175},
   doi         = {10.18653/v1/2026.findings-acl.59},
   arxiv       = {2510.08047},
+  code        = {https://github.com/nukkk97/pseudo2real},
   abstract    = {Robust ASR under domain shift is crucial because real-world systems encounter unseen accents and domains with limited labeled data. Although pseudo-labeling offers a practical workaround, it often introduces systematic, accent-specific errors that filtering fails to fix. We ask: How can we correct these recurring biases without target ground truth? We propose a simple parameter-space correction: in a source domain containing both real and pseudo-labeled data, two ASR models are fine-tuned from the same initialization, one on ground-truth labels and the other on pseudo-labels, and their weight difference forms a correction vector that captures pseudo-label biases. When applied to a pseudo-labeled target model, this vector enhances recognition, achieving up to a 35% relative Word Error Rate (WER) reduction on AfriSpeech-200 across ten African accents with the Whisper tiny model.}
 }
 
@@ -74,6 +75,7 @@
   pages       = {18047--18051},
   doi         = {10.1109/ICASSP55912.2026.11461768},
   arxiv       = {2510.05305},
+  code        = {https://github.com/xxuan-acoustics/WaveSP-Net},
   abstract    = {Modern front-end design for speech deepfake detection relies on full fine-tuning of large pre-trained models like XLSR. However, this approach is not parameter-efficient and may lead to suboptimal generalization to realistic, in-the-wild data types. To address these limitations, we introduce a new family of parameter-efficient front-ends that fuse prompt-tuning with classical signal processing transforms. These include FourierPT-XLSR, which uses the Fourier Transform, and two variants based on the Wavelet Transform: WSPT-XLSR and Partial-WSPT-XLSR. We further propose WaveSP-Net, a novel architecture combining a Partial-WSPT-XLSR front-end and a bidirectional Mamba-based back-end. This design injects multi-resolution features into the prompt embeddings, which enhances the localization of subtle synthetic artifacts without altering the frozen XLSR parameters. Experimental results demonstrate that WaveSP-Net outperforms several state-of-the-art models on two new and challenging benchmarks, Deepfake-Eval-2024 and SpoofCeleb, with low trainable parameters and notable performance gains. The code and models are available at https://github.com/xxuan-acoustics/WaveSP-Net.}
 }
 
@@ -156,6 +158,7 @@
   pages       = {1--8},
   doi         = {10.1109/ASRU65441.2025.11434679},
   arxiv       = {2508.09294},
+  code        = {https://github.com/xuanxixi/Fake-Mamba},
   abstract    = {Advances in speech synthesis intensify security threats, motivating real-time deepfake detection research. We investigate whether bidirectional Mamba can serve as a competitive alternative to Self-Attention in detecting synthetic speech. Our solution, Fake-Mamba, integrates an XLSR front-end with bidirectional Mamba to capture both local and global artifacts. Our core innovation introduces three efficient encoders: TransBiMamba, ConBiMamba, and PN-BiMamba. Leveraging XLSR's rich linguistic representations, PN-BiMamba can effectively capture the subtle cues of synthetic speech. Evaluated on ASVspoof 21 LA, 21 DF, and In-The-Wild benchmarks, Fake-Mamba achieves 0.97%, 1.74%, and 5.85% EER, respectively, representing substantial relative gains over SOTA models XLSR-Conformer and XLSR-Mamba. The framework maintains real-time inference across utterance lengths, demonstrating strong generalization and practical viability. The code is available at https://github.com/xuanxixi/Fake-Mamba.}
 }
 
@@ -182,6 +185,7 @@
   pages       = {1--4},
   doi         = {10.1109/ASRU65441.2025.11433844},
   arxiv       = {2507.04094},
+  code        = {https://github.com/robert0518/MMMOS},
   abstract    = {Accurate audio quality estimation is essential for developing and evaluating audio generation, retrieval, and enhancement systems. Existing non-intrusive assessment models predict a single Mean Opinion Score (MOS) for speech, merging diverse perceptual factors and failing to generalize beyond speech. We propose MMMOS, a no-reference, multi-domain audio quality assessment system that estimates four orthogonal axes: Production Quality, Production Complexity, Content Enjoyment, and Content Usefulness across speech, music, and environmental sounds. MMMOS fuses frame-level embeddings from three pretrained encoders (WavLM, MuQ, and M2D) and evaluates three aggregation strategies with four loss functions. By ensembling the top eight models, MMMOS shows a 20-30% reduction in mean squared error and a 4-5% increase in Kendall's τ versus baseline, gains first place in six of eight Production Complexity metrics, and ranks among the top three on 17 of 32 challenge metrics.}
 }
 
@@ -195,6 +199,7 @@
   pages       = {1--4},
   doi         = {10.1109/ASRU65441.2025.11434689},
   arxiv       = {2506.21951},
+  code        = {https://github.com/rezzsl/HighRateMOS},
   abstract    = {Modern speech quality prediction models are trained on audio data resampled to a specific sampling rate. When faced with higher-rate audio at test time, these models can produce biased scores. We introduce HighRateMOS, the first non-intrusive mean opinion score (MOS) model that explicitly considers sampling rate. HighRateMOS ensembles three model variants that exploit the following information: (i) a learnable embedding of speech sampling rate, (ii) Wav2vec 2.0 self-supervised embeddings, (iii) multi-scale CNN spectral features, and (iv) MFCC features. In AudioMOS 2025 Track3, HighRateMOS ranked first in five out of eight metrics. Our experiments confirm that modeling the sampling rate directly leads to more robust and sampling-rate-agnostic speech quality predictions.}
 }
 
@@ -291,6 +296,7 @@
   pages       = {4008--4012},
   doi         = {10.21437/Interspeech.2025-679},
   arxiv       = {2505.15773},
+  code        = {https://github.com/YuXiangLo/ToxicTone},
   abstract    = {Despite extensive research on toxic speech detection in text, a critical gap remains in handling spoken Mandarin audio. The lack of annotated datasets that capture the unique prosodic cues and culturally specific expressions in Mandarin leaves spoken toxicity underexplored. To address this, we introduce ToxicTone -- the largest public dataset of its kind -- featuring detailed annotations that distinguish both forms of toxicity (e.g., profanity, bullying) and sources of toxicity (e.g., anger, sarcasm, dismissiveness). Our data, sourced from diverse real-world audio and organized into 13 topical categories, mirrors authentic communication scenarios. We also propose a multimodal detection framework that integrates acoustic, linguistic, and emotional features using state-of-the-art speech and emotion encoders. Extensive experiments show our approach outperforms text-only and baseline models, underscoring the essential role of speech-specific cues in revealing hidden toxic expressions.}
 }
 
@@ -328,6 +334,7 @@
   booktitle   = {The Thirteenth International Conference on Learning Representations (ICLR)},
   year        = {2025},
   arxiv       = {2411.05361},
+  code        = {https://github.com/dynamic-superb/dynamic-superb},
   abstract    = {Multimodal foundation models, such as Gemini and ChatGPT, have revolutionized human-machine interactions by seamlessly integrating various forms of data. Developing a universal spoken language model that comprehends a wide range of natural language instructions is critical for bridging communication gaps and facilitating more intuitive interactions. However, the absence of a comprehensive evaluation benchmark poses a significant challenge. We present Dynamic-SUPERB Phase-2, an open and evolving benchmark for the comprehensive evaluation of instruction-based universal speech models. Building upon the first generation, this second version incorporates 125 new tasks contributed collaboratively by the global research community, expanding the benchmark to a total of 180 tasks, making it the largest benchmark for speech and audio evaluation. While the first generation of Dynamic-SUPERB was limited to classification tasks, Dynamic-SUPERB Phase-2 broadens its evaluation capabilities by introducing a wide array of novel and diverse tasks, including regression and sequence generation, across speech, music, and environmental audio. Evaluation results show that no model performed well universally. SALMONN-13B excelled in English ASR and Qwen2-Audio-7B-Instruct showed high accuracy in emotion recognition, but current models still require further innovations to handle a broader range of tasks. We open-source all task data and the evaluation pipeline at https://github.com/dynamic-superb/dynamic-superb.}
 }
 
@@ -502,6 +509,7 @@
   booktitle   = {Proc. Interspeech 2026},
   year        = {2026},
   arxiv       = {2603.21478},
+  code        = {https://github.com/ag027592/TaigiSpeech},
   abstract    = {Speech technologies have advanced rapidly and serve diverse populations worldwide. However, many languages remain underrepresented due to limited resources. In this paper, we introduce TaigiSpeech, a real-world speech intent dataset in Taiwanese Taigi (aka Taiwanese Hokkien/Southern Min), which is a low-resource and primarily spoken language. The dataset is collected from older adults, comprising 21 speakers with a total of 3k utterances. It is designed for practical intent detection scenarios, including healthcare and home assistant applications. To address the scarcity of labeled data, we explore two data mining strategies with two levels of supervision: keyword match data mining with LLM pseudo labeling via an intermediate language and an audio-visual framework that leverages multimodal cues with minimal textual supervision. This design enables scalable dataset construction for low-resource and unwritten spoken languages. TaigiSpeech will be released under the CC BY 4.0 license to facilitate broad adoption and research on low-resource and unwritten languages. The project website and the dataset can be found on https://kwchang.org/taigispeech.}
 }
 
@@ -571,6 +579,7 @@
   journal     = {arXiv preprint arXiv:2605.01597},
   year        = {2026},
   arxiv       = {2605.01597},
+  code        = {https://github.com/dlion168/awesome-speech-fairness},
   abstract    = {Speech technologies are deployed in high-stakes settings, yet fairness concerns remain fragmented across tasks and disciplines. Existing surveys either adopt a general machine-learning perspective that overlooks speech-specific properties or focus on a single task, missing failure patterns shared across the speech domain. Synthesizing over 400 studies spanning generation and perception tasks and emerging speech-language models, this survey presents a unified framework that links formal fairness definitions to evaluation, diagnosis, and mitigation. We formalize seven fairness definitions adapted to the speech modality and organize the field's conceptual expansion through three paradigms: Robustness, Representation, and Governance. We then ground evaluation metrics in the mathematical cores of these definitions, organizing them into six families and mapping each family back to the definitions it operationalizes. We diagnose bias sources along the speech processing pipeline, surfacing speech-specific mechanisms such as channel bias as a demographic proxy and annotation subjectivity in emotion labels. We systematize mitigation strategies across four intervention stages, mapping each to the diagnosed sources. Finally, we identify open challenges and propose directions for future research.},
   selected    = {true}
 }
@@ -583,6 +592,7 @@
   booktitle   = {Proc. Interspeech 2026},
   year        = {2026},
   arxiv       = {2604.17435},
+  code        = {https://github.com/47zzz/MoVE-code},
   abstract    = {Recent Speech-to-Speech Translation (S2ST) systems achieve strong semantic accuracy yet consistently strip away non-verbal vocalizations (NVs), such as laughter and crying that convey pragmatic intent, which severely limits real-world utility. We address this via three contributions. First, we propose a synthesis pipeline for building scalable expressive datasets to overcome the data scarcity limitation. Second, we propose MoVE, a Mixture-of-LoRA-Experts architecture with expressive-specialized adapters and a soft-weighting router that blends experts for capturing hybrid expressive states. Third, we show pretrained AudioLLMs enable striking data efficiency: 30 minutes of curated data is enough for strong performance. On English-Chinese S2ST, while comparing with strong baselines, MoVE reproduces target NVs in 76% of cases and achieves the highest human-rated naturalness and emotional fidelity among all compared systems, where existing S2ST systems preserve at most 14% of NVs.},
   website     = {https://47zzz.github.io/MoVE/}
 }
@@ -673,6 +683,7 @@
   journal     = {arXiv preprint arXiv:2501.17790},
   year        = {2025},
   arxiv       = {2501.17790},
+  code        = {https://github.com/mtkresearch/BreezyVoice},
   abstract    = {We present BreezyVoice, a Text-to-Speech (TTS) system specifically adapted for Taiwanese Mandarin, highlighting phonetic control abilities to address the unique challenges of polyphone disambiguation in the language. Building upon CosyVoice, we incorporate a $S^{3}$ tokenizer, a large language model (LLM), an optimal-transport conditional flow matching model (OT-CFM), and a grapheme to phoneme prediction model, to generate realistic speech that closely mimics human utterances. Our evaluation demonstrates BreezyVoice's superior performance in both general and code-switching contexts, highlighting its robustness and effectiveness in generating high-fidelity speech. Additionally, we address the challenges of generalizability in modeling long-tail speakers and polyphone disambiguation. Our approach significantly enhances performance and offers valuable insights into the workings of neural codec TTS systems.}
 }
 
@@ -707,5 +718,6 @@
   journal     = {arXiv preprint arXiv:2607.18529},
   year        = {2026},
   arxiv       = {2607.18529},
+  code        = {https://github.com/snooow1029/edupanel},
   abstract    = {Teaching videos are becoming a major medium for education, creating a growing need for scalable evaluation of their pedagogical quality. Existing automatic judges do not fully address this setting because teaching quality depends on multimodal evidence and should be evaluated with respect to the intended learner rather than as a universal property. We present EduPanel, a rubric-grounded, learner-conditioned LLM judge that decomposes evaluation across specialized agents to produce interpretable assessments for different aspects of teaching quality. Across expert studies, architecture ablations, and learner-persona analyses, EduPanel achieves reliability comparable to a median human expert. In expert evaluation, its feedback improves scoring accuracy (MAE 0.87 to 0.73), while experts remain able to detect unreliable outputs (AUC = 0.77) instead of accepting them blindly. These results suggest that EduPanel can serve as effective assistants for educational evaluation rather than replacements for human experts.}
 }
