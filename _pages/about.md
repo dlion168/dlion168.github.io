@@ -35,5 +35,6 @@ Learning Lab. I'm also a Student Researcher at Google Cloud AI.
 My research is on **large audio-language models** and **fairness in speech processing**, covering
 social bias in speech models, speech emotion recognition, and speech quality assessment. I have
 published 30+ papers at Interspeech, ICASSP, ASRU, SLT, ACL, EMNLP and IEEE TASLP with over 690
-citations, and received the Best Paper Runner-Up award at Interspeech 2024 and the NSTC Graduate
+citations, and received Best Paper Runner-Up in the Responsible Speech Foundation Models Special
+Session at Interspeech 2024 and the NSTC Graduate
 Research Fellowship in 2025.
