@@ -229,12 +229,31 @@ module ScholarMeta
         font-family: "Academicons";
         content: "\e974";
       }
+      /* Hugging Face has no glyph in either icon font, so use their favicon. */
+      a.btn[href*="huggingface.co"]::before {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.4em;
+        vertical-align: -0.15em;
+        background: url("https://huggingface.co/favicon.ico") no-repeat center / contain;
+      }
     </style>
   CSS
 
   def inject(html, payload)
     return html unless html.include?("</head>")
     html.sub("</head>", "#{payload}\n</head>")
+  end
+
+  # al-folio has no bibtex field for datasets, so a Hugging Face dataset rides in
+  # on `website` and the button would read "Website". Relabel it here rather than
+  # shadowing the gem's bib.liquid.
+  def relabel_dataset_buttons(html)
+    html.gsub(%r{(<a href="[^"]*huggingface\.co/datasets/[^"]*"[^>]*class="[^"]*btn[^"]*"[^>]*>)Website(</a>)}) do
+      "#{Regexp.last_match(1)}Dataset#{Regexp.last_match(2)}"
+    end
   end
 end
 
@@ -255,6 +274,7 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     # Publication buttons appear on detail pages, /publications/ and the home page.
     if entry || ["/", "/index.html", "/publications/"].include?(page.url)
       page.output = ScholarMeta.inject(page.output, ScholarMeta::BUTTON_ICON_CSS)
+      page.output = ScholarMeta.relabel_dataset_buttons(page.output)
     end
   rescue StandardError => e
     Jekyll.logger.warn "ScholarMeta:", "skipped #{page.url} — #{e.class}: #{e.message}"
