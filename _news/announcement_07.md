@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[FAS-Conformer](/bibliography/you2025state/) accepted to *Computer Speech & Language* — an efficient Conformer with feature aggregation for direction-of-arrival estimation. My second journal article.
+[FAS-Conformer](/bibliography/you2025state/) accepted to _Computer Speech & Language_ — an efficient Conformer with feature aggregation for direction-of-arrival estimation. My second journal article.

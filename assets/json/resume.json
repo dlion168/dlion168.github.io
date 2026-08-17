@@ -115,9 +115,7 @@
       "startDate": "2023-09-01",
       "endDate": "2025-01-31",
       "score": "GPA 4.22/4.3, ranked 2/14",
-      "courses": [
-        "Transferred to the PhD program in Spring 2025"
-      ]
+      "courses": ["Transferred to the PhD program in Spring 2025"]
     },
     {
       "institution": "National Taiwan University",
@@ -258,11 +256,7 @@
   "interests": [
     {
       "name": "Fairness in Speech AI",
-      "keywords": [
-        "Demographic disparity in speech models",
-        "Accent and first-language bias",
-        "Debiasing without demographic labels"
-      ]
+      "keywords": ["Demographic disparity in speech models", "Accent and first-language bias", "Debiasing without demographic labels"]
     }
   ]
 }
