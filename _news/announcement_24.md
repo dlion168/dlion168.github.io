@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Four papers at **INTERSPEECH 2025**: [Mitigating Subgroup Disparities](/bibliography/lin2025mitigating/), [Distilling Speech and Music Encoders](/bibliography/rittergutierrez2025distilling/), [Meta-PerSER](/bibliography/shen2025metaperser/), [ToxicTone](/bibliography/luo2025toxictone/). Received an **INTERSPEECH 2025 Travel Grant**.
+Four papers at **INTERSPEECH 2025** in Rotterdam 🇳🇱: [Mitigating Subgroup Disparities](/bibliography/lin2025mitigating/), [Distilling Speech and Music Encoders](/bibliography/rittergutierrez2025distilling/), [Meta-PerSER](/bibliography/shen2025metaperser/), [ToxicTone](/bibliography/luo2025toxictone/). Received an **INTERSPEECH 2025 Travel Grant**.
