@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Four papers at **SLT 2024**: [Listen and Speak Fairly](/bibliography/lin2024listen/), [Spoken Stereoset](/bibliography/lin2024spoken/), [Codec-SUPERB @ SLT 2024](/bibliography/wu2024codecsuperb/), [Speech Foundation Models on a Compute Budget](/bibliography/liu2024efficient/).
+Four papers at **SLT 2024** in Macao 🇲🇴: [Listen and Speak Fairly](/bibliography/lin2024listen/), [Spoken Stereoset](/bibliography/lin2024spoken/), [Codec-SUPERB @ SLT 2024](/bibliography/wu2024codecsuperb/), [Speech Foundation Models on a Compute Budget](/bibliography/liu2024efficient/).
