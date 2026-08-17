@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented two Findings papers at **ACL 2026** in San Diego 🇺🇸.
+Presented two Findings papers at **ACL 2026** in San Diego 🇺🇸, and received a **Foundation for the Advancement of Outstanding Scholarship Travel Grant**.
