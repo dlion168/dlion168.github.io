@@ -81,7 +81,23 @@ layout: page
         <a href="{{ e.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
       {% endif %}
       {% if e.website %}
-        <a href="{{ e.website }}" class="btn btn-sm z-depth-0" role="button">Project page</a>
+        {% comment %}
+          al-folio has no dataset field, so a Hugging Face dataset rides in on
+          `website` (or `supp` when `website` is already the project page).
+          Label it for what it is instead of "Project page".
+        {% endcomment %}
+        {% if e.website contains 'huggingface.co/datasets/' %}
+          <a href="{{ e.website }}" class="btn btn-sm z-depth-0" role="button">Dataset</a>
+        {% else %}
+          <a href="{{ e.website }}" class="btn btn-sm z-depth-0" role="button">Project page</a>
+        {% endif %}
+      {% endif %}
+      {% if e.supp %}
+        {% if e.supp contains 'huggingface.co/datasets/' %}
+          <a href="{{ e.supp }}" class="btn btn-sm z-depth-0" role="button">Dataset</a>
+        {% else %}
+          <a href="{{ e.supp }}" class="btn btn-sm z-depth-0" role="button">Supplementary</a>
+        {% endif %}
       {% endif %}
       {% if e.html %}
         <a href="{{ e.html }}" class="btn btn-sm z-depth-0" role="button">Publisher</a>
