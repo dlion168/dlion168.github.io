@@ -248,10 +248,12 @@ module ScholarMeta
   end
 
   # al-folio has no bibtex field for datasets, so a Hugging Face dataset rides in
-  # on `website` and the button would read "Website". Relabel it here rather than
-  # shadowing the gem's bib.liquid.
+  # on whichever generic field is still free -- `website` for one paper, `supp`
+  # for another -- and the button would read "Website" or "Supp". Relabel by href
+  # rather than shadowing the gem's bib.liquid. Scoped to /datasets/ so a Hugging
+  # Face Space or model link keeps its original label.
   def relabel_dataset_buttons(html)
-    html.gsub(%r{(<a href="[^"]*huggingface\.co/datasets/[^"]*"[^>]*class="[^"]*btn[^"]*"[^>]*>)Website(</a>)}) do
+    html.gsub(%r{(<a href="[^"]*huggingface\.co/datasets/[^"]*"[^>]*class="[^"]*btn[^"]*"[^>]*>)[^<]*(</a>)}) do
       "#{Regexp.last_match(1)}Dataset#{Regexp.last_match(2)}"
     end
   end
