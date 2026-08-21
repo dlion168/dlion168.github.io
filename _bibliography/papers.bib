@@ -671,12 +671,12 @@
   abstract    = {While Contrastive Decoding (CD) has proven effective at enhancing Large Audio Language Models (LALMs), the underlying mechanisms driving its success and the comparative efficacy of different strategies remain unclear. This study systematically evaluates four distinct CD strategies across diverse LALM architectures. We identify Audio-Aware Decoding and Audio Contrastive Decoding as the most effective methods. However, their impact varies significantly by model. To explain this variability, we introduce a Transition Matrix framework to map error pattern shifts during inference. Our analysis demonstrates that CD reliably rectifies errors in which models falsely claim an absence of audio or resort to uncertainty-driven guessing. Conversely, it fails to correct flawed reasoning or confident misassertions. Ultimately, these findings provide a clear guideline for determining which LALM architectures are most suitable for CD enhancement based on their baseline error profiles.}
 }
 
-@article{xie2026twsoundk,
-  abbr        = {arXiv},
+@inproceedings{xie2026twsoundk,
+  abbr        = {ISCSLP},
   bibtex_show = {true},
   title       = {TW-Sound580K: A Regional Audio-Text Dataset with Verification-Guided Curation for Localized Audio-Language Modeling},
   author      = {Hao-Hui Xie and Ho-Lam Chung and Yi-Cheng Lin and Ke-Han Lu and Wenze Ren and Xie Chen and Hung-yi Lee},
-  journal     = {arXiv preprint arXiv:2603.05094},
+  booktitle   = {Proc. ISCSLP 2026},
   year        = {2026},
   arxiv       = {2603.05094},
   abstract    = {Large Audio-Language Models (LALMs) typically struggle with localized dialectal prosody due to the scarcity of specialized corpora. We present TW-Sound580K, a Taiwanese audio-text instruction dataset developed through a Verify-Generate-Critique (VGC) protocol. This pipeline leverages Dual-ASR validation to filter 522K raw clips, subsequently expanding them into 580,000 high-fidelity instruction pairs using a teacher model. The dataset's utility is demonstrated through Tai-LALM, which fine-tunes a DeSTA 2.5-Audio-initialized backbone and incorporates a dynamic Dual-ASR Arbitration strategy to optimize transcription selection during inference. On the TAU Benchmark, Tai-LALM reaches 49.1% accuracy, marking a 6.5% absolute improvement over the zero-shot baseline (42.6% with ASR text conditioning). This confirms that integrating regional corpora with rigorous curation and dynamic arbitration significantly enhances LALM performance on localized speech.}
@@ -693,12 +693,12 @@
   abstract    = {Automatic speech recognition (ASR) is critical for language accessibility, yet low-resource Cantonese remains challenging due to limited annotated data, six lexical tones, tone sandhi, and accent variation. Existing ASR models, such as Whisper, often suffer from high word error rates. Large audio-language models (LALMs), in contrast, can leverage broader contextual reasoning but still require explicit tonal and prosodic acoustic cues. We introduce CantoASR, a collaborative ASR-LALM error correction framework that integrates forced alignment for acoustic feature extraction, a LoRA-finetuned Whisper for improved tone discrimination, and an instruction-tuned Qwen-Audio for prosody-aware correction. Evaluations on spontaneous Cantonese data show substantial CER gains over Whisper-Large-V3. These findings suggest that integrating acoustic cues with LALM reasoning provides a scalable strategy for low-resource tonal and dialectal ASR.}
 }
 
-@article{hsu2025breezyvoice,
-  abbr        = {arXiv},
+@inproceedings{hsu2025breezyvoice,
+  abbr        = {ISCSLP},
   bibtex_show = {true},
   title       = {BreezyVoice: Adapting TTS for Taiwanese Mandarin with Enhanced Polyphone Disambiguation -- Challenges and Insights},
   author      = {Chan-Jan Hsu and Yi-Cheng Lin and Chia-Chun Lin and Wei-Chih Chen and Ho Lam Chung and Chen-An Li and Yi-Chang Chen and Chien-Yu Yu and Ming-Ji Lee and Chien-Cheng Chen and Ru-Heng Huang and Hung-yi Lee and Da-Shan Shiu},
-  journal     = {arXiv preprint arXiv:2501.17790},
+  booktitle   = {Proc. ISCSLP 2026},
   year        = {2025},
   arxiv       = {2501.17790},
   code        = {https://github.com/mtkresearch/BreezyVoice},
