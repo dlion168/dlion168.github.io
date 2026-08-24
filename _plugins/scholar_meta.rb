@@ -229,6 +229,14 @@ module ScholarMeta
         font-family: "Academicons";
         content: "\e974";
       }
+      /* Venue badges set only a background colour, so the inner link keeps the
+         theme's pink link colour -- unreadable on the dark badge backgrounds.
+         Both the gem's bib.liquid and our bib_details.html render them this way. */
+      abbr.badge,
+      abbr.badge a {
+        color: #fff;
+        text-decoration: none;
+      }
       /* Hugging Face has no glyph in either icon font, so use their favicon. */
       a.btn[href*="huggingface.co"]::before {
         content: "";

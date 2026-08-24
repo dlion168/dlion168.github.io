@@ -36,8 +36,8 @@ layout: page
     {% if e.abbr %}
       {% assign venue = site.data.venues[e.abbr] %}
       {% if venue and venue.color %}
-        <abbr class="badge rounded" style="background-color: {{ venue.color }}">
-          {% if venue.url %}<a href="{{ venue.url }}">{{ e.abbr }}</a>{% else %}{{ e.abbr }}{% endif %}
+        <abbr class="badge rounded" style="background-color: {{ venue.color }}; color: #fff">
+          {% if venue.url %}<a href="{{ venue.url }}" style="color: inherit">{{ e.abbr }}</a>{% else %}{{ e.abbr }}{% endif %}
         </abbr>
       {% else %}
         <abbr class="badge rounded">{{ e.abbr }}</abbr>

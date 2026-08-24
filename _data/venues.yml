@@ -28,13 +28,13 @@
   color: "#a61e4d"
 "ICLR":
   url: https://iclr.cc/
-  color: "#e8590c"
+  color: "#b34700"
 "ISCSLP":
   url: https://www.isca-archive.org/
   color: "#0e7490"
 "APSIPA":
   url: http://www.apsipa.org/
-  color: "#5c7cfa"
+  color: "#3b5bdb"
 "arXiv":
   url: https://arxiv.org/
-  color: "#868e96"
+  color: "#5f666e"
