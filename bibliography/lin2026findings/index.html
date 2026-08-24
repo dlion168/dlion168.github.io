@@ -144,13 +144,18 @@
     font-family: "Academicons";
     content: "\e974";
   }
-  /* WCAG 1.4.3: #828282 on the light background is 3.84:1 and on the dark
-     background 4.43:1, both under the 4.5:1 minimum for body text. */
-  .more-authors {
-    color: #6e6e6e;
+  /* WCAG 1.4.3: the theme's muted-text colour is #828282 in both schemes,
+     which is 3.84:1 on white and 4.43:1 on the dark background -- both under
+     the 4.5:1 minimum. Override the variable rather than one class, so post
+     meta, post tags and the author overflow text are all fixed together.
+     Matching the theme's own selectors (:root and html[data-theme=dark]) is
+     what makes these win; a plain .more-authors rule loses to
+     . */
+  :root {
+    --global-text-color-light: #6e6e6e;
   }
-  :root[data-theme="dark"] .more-authors {
-    color: #9e9e9e;
+  html[data-theme="dark"] {
+    --global-text-color-light: #9e9e9e;
   }
 
   /* WCAG 1.4.1: links inside a text block sit at 2.64:1 against the
