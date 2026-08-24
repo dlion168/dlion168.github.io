@@ -229,6 +229,33 @@ module ScholarMeta
         font-family: "Academicons";
         content: "\e974";
       }
+      /* WCAG 1.4.3: #828282 on the light background is 3.84:1 and on the dark
+         background 4.43:1, both under the 4.5:1 minimum for body text. */
+      .more-authors {
+        color: #6e6e6e;
+      }
+      :root[data-theme="dark"] .more-authors {
+        color: #9e9e9e;
+      }
+
+      /* WCAG 1.4.1: links inside a text block sit at 2.64:1 against the
+         surrounding text, under the 3:1 needed to tell them apart by colour
+         alone. Underline them; buttons, badges and nav links stay clean. */
+      p a,
+      li a,
+      td a,
+      .news a {
+        text-decoration: underline;
+      }
+      a.btn,
+      abbr.badge a,
+      .nav-link,
+      .navbar-brand,
+      .social a,
+      footer a {
+        text-decoration: none;
+      }
+
       /* Venue badges set only a background colour, so the inner link keeps the
          theme's pink link colour -- unreadable on the dark badge backgrounds.
          Both the gem's bib.liquid and our bib_details.html render them this way. */
@@ -282,10 +309,10 @@ Jekyll::Hooks.register :pages, :post_render do |page|
     end
 
     # Publication buttons appear on detail pages, /publications/ and the home page.
-    if entry || ["/", "/index.html", "/publications/"].include?(page.url)
-      page.output = ScholarMeta.inject(page.output, ScholarMeta::BUTTON_ICON_CSS)
-      page.output = ScholarMeta.relabel_dataset_buttons(page.output)
-    end
+    # The stylesheet carries site-wide accessibility fixes as well as the button
+    # icons, so it goes on every page, not just the ones showing publications.
+    page.output = ScholarMeta.inject(page.output, ScholarMeta::BUTTON_ICON_CSS)
+    page.output = ScholarMeta.relabel_dataset_buttons(page.output)
   rescue StandardError => e
     Jekyll.logger.warn "ScholarMeta:", "skipped #{page.url} — #{e.class}: #{e.message}"
   end
