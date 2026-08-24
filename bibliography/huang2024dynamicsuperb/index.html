@@ -398,8 +398,8 @@
      the 4.5:1 minimum. Override the variable rather than one class, so post
      meta, post tags and the author overflow text are all fixed together.
      Matching the theme's own selectors (:root and html[data-theme=dark]) is
-     what makes these win; a plain .more-authors rule loses to
-     . */
+     what makes these win; a plain .more-authors rule loses to the theme's
+     `.publications ol.bibliography li .author>span.more-authors`. */
   :root {
     --global-text-color-light: #6e6e6e;
   }
