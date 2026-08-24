@@ -135,12 +135,13 @@ cv:
         releaseDate: "2024-08-01"
         url: https://doi.org/10.18653/v1/2024.findings-acl.616
     Service:
-      - label: Conferences
-        details: ACL Rolling Review (Feb 2024, Oct 2024, Feb 2025, May 2025), INTERSPEECH 2025, ASRU 2025,
-          ACML 2025, ICLR 2025, ROCLING 2025, ICASSP 2026.
-      - label: Journals
-        details: IEEE Transactions on Audio, Speech and Language Processing; IEEE Transactions on Affective
-          Computing.
+      # One entry per role, so Organizer, Teaching Assistant or Mentor can each be added
+      # as another `label` line. The generic section renderer prints `label` in bold
+      # followed by `details`, and does not run `details` through markdown.
+      - label: Reviewer
+        details: Conferences — ACL Rolling Review (Feb 2024, Oct 2024, Feb 2025, May 2025), INTERSPEECH
+          2025, ASRU 2025, ACML 2025, ICLR 2025, ROCLING 2025, ICASSP 2026. Journals — IEEE Transactions
+          on Audio, Speech and Language Processing; IEEE Transactions on Affective Computing.
     Skills:
       - name: Research Areas
         keywords:
