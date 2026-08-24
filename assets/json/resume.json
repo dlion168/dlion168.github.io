@@ -58,19 +58,6 @@
       "startDate": "2026-07-01"
     },
     {
-      "name": "ASRU AudioMOS Challenge 2025",
-      "position": "Participant",
-      "startDate": "2025-05-01",
-      "endDate": "2025-07-31",
-      "url": "https://arxiv.org/abs/2507.09904",
-      "summary": "Automatic quality assessment of generated speech, music, and audio.",
-      "highlights": [
-        "First place on 13 of 16 metrics in Track 1 — MOS prediction for text-to-music systems.",
-        "Top 3 places on 17 of 32 metrics in Track 2 — Audiobox-aesthetics-style prediction.",
-        "First place on 5 of 8 metrics in Track 3 — MOS prediction for speech at high sampling frequencies."
-      ]
-    },
-    {
       "name": "Microsoft Taiwan",
       "position": "Research & Development Intern",
       "startDate": "2022-09-01",
@@ -78,18 +65,12 @@
       "highlights": [
         "Upgraded the geolocation prediction system from rule-based to ML-based, improving accuracy by 2% and reducing prediction time by 10%."
       ]
-    }
-  ],
-  "volunteer": [
+    },
     {
-      "organization": "Peer Review",
-      "position": "Reviewer",
-      "startDate": "2024-01-01",
-      "summary": "Conference and journal peer review in speech and language processing.",
-      "highlights": [
-        "Conferences: ACL Rolling Review (Feb 2024, Oct 2024, Feb 2025, May 2025), INTERSPEECH 2025, ASRU 2025, ACML 2025, ICLR 2025, ROCLING 2025, ICASSP 2026.",
-        "Journals: IEEE Transactions on Audio, Speech and Language Processing; IEEE Transactions on Affective Computing."
-      ]
+      "name": "ASUS AICS",
+      "position": "Intern",
+      "startDate": "2022-06-01",
+      "endDate": "2022-08-31"
     }
   ],
   "education": [
