@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our team placed **first on 13 of 16 metrics in Track 1** of the **ASRU AudioMOS Challenge 2025** (MOS prediction for text-to-music systems), first on 5 of 8 metrics in Track 3, and top-3 on 17 of 32 metrics in Track 2.
+Our team placed first in **Track 1** (MOS prediction for text-to-music systems) and **Track 3** (MOS prediction for speech at high sampling rates) of the **ASRU AudioMOS Challenge 2025**.
