@@ -63,11 +63,13 @@ module ScholarMeta
   # name, so "Yi-Cheng Lin*" in citation_author would read as a different person
   # from "Yi-Cheng Lin"; strip the markers al-folio's bib layout renders as
   # superscripts before any metadata goes out.
-  CONTRIB_MARKERS = /[*\u2217\u2020\u2021\u00A7\u00B6\u2016&^]+\z/.freeze
+  # jekyll-scholar hands names over as "Tsai*, Yun-Shao", so the marker sits in
+  # the middle of the string -- strip it wherever it appears, not just at the end.
+  CONTRIB_MARKERS = /[*\u2217\u2020\u2021\u00A7\u00B6\u2016]/.freeze
 
   def authors_of(entry)
     raw = clean(entry["author"])
-    raw.split(/\s+and\s+/).map { |a| a.strip.sub(CONTRIB_MARKERS, "") }.reject(&:empty?)
+    raw.split(/\s+and\s+/).map { |a| a.gsub(CONTRIB_MARKERS, "").strip }.reject(&:empty?)
   end
 
   def meta_tags(entry, page_url, site_url)
