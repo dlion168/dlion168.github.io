@@ -12,6 +12,27 @@
 
 %% ========== Published ==========
 
+@inproceedings{yu2026listen,
+  abbr        = {SLT},
+  bibtex_show = {true},
+  title       = {Listen, Critique, and Refine: RL-Based Self-Refinement for Instruction-Following Speech Synthesis},
+  author      = {Chee-En Yu and Yi-Cheng Lin and Sung-Feng Huang and Yun-Shao Tsai and Ho-Lam Chung and Xuanjun Chen and Hung-yi Lee},
+  booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
+  year        = {2026},
+  html        = {https://openreview.net/forum?id=olqG53lMxD}
+}
+
+@inproceedings{chen2026audioicl,
+  abbr        = {SLT},
+  bibtex_show = {true},
+  title       = {AudioICL-Bench: A Benchmark for Large Audio Language Model In-Context Learning},
+  author      = {Jia-Hung Chen and Yi-Cheng Lin and Kai-Wei Chang and Ke-Han Lu and Hung-yi Lee},
+  booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
+  year        = {2026},
+  html        = {https://openreview.net/forum?id=CePOGULXLq},
+  code        = {https://github.com/robert0518/AudioICL-Bench}
+}
+
 @inproceedings{hsu2026fallacy,
   abbr        = {ACL},
   bibtex_show = {true},
@@ -546,7 +567,7 @@
   abbr        = {arXiv},
   bibtex_show = {true},
   title       = {Findings of the First Teaching Monster Challenge: A Benchmark of Pedagogical Content Knowledge in AI Agents},
-  author      = {Yi-Cheng Lin and Yu-Kai Guo and Szu-Chi Chen and Bo-Han Feng and Yun-Man Hsu and Hsiang Hsieh and Yu-Jung Lin and Yue-Ling Wu and Jia-Kai Dong and An-Yu Cheng and Yu-Han Huang and Lok-Lam Ieong and Kuan-Yu Chen and Ming-Douo Tchouang and Shao-Hua Sun and Che Lin and Jian-Jiun Ding and Hung-yi Lee},
+  author      = {Yi-Cheng Lin and Yu-Kai Guo and Szu-Chi Chen and Bo-Han Feng and Yun-Man Hsu and Hsiang Hsieh and Yu-Jung Lin and Yue-Ling Wu and Jia-Kai Dong and Cheng An Yu and Yu-Han Huang and Lok-Lam Ieong and Kuan-Yu Chen and Ming-Douo Tchouang and Shao-Hua Sun and Che Lin and Jian-Jiun Ding and Hung-yi Lee},
   journal     = {arXiv preprint arXiv:2608.08852},
   year        = {2026},
   arxiv       = {2608.08852},
@@ -554,23 +575,23 @@
   abstract    = {AI agents can now solve problems, answer like subject experts, and generate long-form multimodal content. However, whether they can adapt a lesson to fit a specified learner, which education calls Pedagogical Content Knowledge (PCK), has not been benchmarked. To measure it, we introduce the Teaching Monster Challenge, the first instructional video generation benchmark to treat the learner persona as an explicit evaluation criterion. Each system is given a topic and a learner persona and must generate a complete instructional video. Every video is screened by an LLM-judge, ranked by crowd pairwise voting, and finalized by an expert panel. The first edition shows that today's systems handle the content well but are far weaker at presenting it and adapting it to the learner. The same process exposes a limit of automatic judging. The LLM-judge separates a clear low-performing tail but ranks the strongest systems poorly. The strongest systems receive nearly identical scores from the judge, so its ranking of them does not match human preference. Progress therefore requires not only better teaching systems but also better automatic judges, and we release the benchmark, rubric, and human judgments as a testbed for both.}
 }
 
-@article{li2026amrd,
-  abbr        = {arXiv},
+@inproceedings{li2026amrd,
+  abbr        = {SLT},
   bibtex_show = {true},
   title       = {AMRD: Adaptive Multi-Teacher Relational Distillation for Lightweight Speech Emotion Recognition},
   author      = {Yuqi Li and Yi-Cheng Lin and Xianglong Wang and Kuo Yang and Xiaoqin Feng and Yixuan Wang and Huiran Duan and Yingli Tian},
-  journal     = {arXiv preprint arXiv:2607.25289},
+  booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
   year        = {2026},
   arxiv       = {2607.25289},
   abstract    = {On-device speech emotion recognition (SER) is critical for real-time applications, yet large self-supervised models that excel at SER are too costly for edge devices. Multi-teacher knowledge distillation can compress them into a lightweight student, but two challenges remain: teacher reliability varies across batches, and logit-level distillation ignores inter-sample relational structure. We propose Adaptive Multi-teacher Relational Distillation (AMRD) to address both. A one-class SVM on each teacher's logit similarity matrix assigns per-batch weights favoring more coherent teachers. A relational distillation loss aligns teacher and student similarity matrices, capturing structure that logit matching misses. On IEMOCAP and CREMA-D datasets across four student architectures, AMRD outperforms single-teacher distillation baselines in most settings, and ablations confirm both components yield complementary gains.}
 }
 
-@article{tsai2026hearing,
-  abbr        = {arXiv},
+@inproceedings{tsai2026hearing,
+  abbr        = {SLT},
   bibtex_show = {true},
   title       = {Hearing Like Humans? Sound Symbolism and Perceptual Alignment in Speech Language Models},
   author      = {Yun-Shao Tsai and Chun-Wei Chen and Chee-En Yu and Yi-Cheng Lin and Hung-yi Lee},
-  journal     = {arXiv preprint arXiv:2607.10162},
+  booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
   year        = {2026},
   arxiv       = {2607.10162},
   abstract    = {Sound symbolism, the human tendency to map speech sounds to perceptual qualities such as roundness or sharpness, arises primarily from the acoustics of speech rather than spelling. Whether Speech Language Models (SLMs) share this tendency remains open, as prior evaluations rely on text or images rather than real speech. We study it using genuine human speech recordings, comparing model judgments against human data across the auditory, crossmodal, and visual components of the effect. We find that SLMs' auditory judgments align poorly with human perception and miss the acoustic cues, such as spectral tilt, that drive human intuitions, and open-weight models cannot reliably link a heard sound to its corresponding shape. With a visual-only control ruling out shape perception, the weakness localizes to how speech is represented, suggesting that perceptual alignment depends not on stronger vision but on speech representations that capture the cues humans hear.}
@@ -614,12 +635,12 @@
   website     = {https://47zzz.github.io/MoVE/}
 }
 
-@article{lin2026vibe,
-  abbr        = {arXiv},
+@inproceedings{lin2026vibe,
+  abbr        = {SLT},
   bibtex_show = {true},
-  title       = {VIBE: Voice-Induced open-ended Bias Evaluation for Large Audio-Language Models via Real-World Speech},
+  title       = {VIBE: Voice-Induced open-ended Bias Evaluation for Large Audio-Language Models via Human Speech},
   author      = {Yi-Cheng Lin and Yusuke Hirota and Sung-Feng Huang and Hung-yi Lee},
-  journal     = {arXiv preprint arXiv:2604.17248},
+  booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
   year        = {2026},
   arxiv       = {2604.17248},
   abstract    = {Large Audio-Language Models (LALMs) are increasingly integrated into daily applications, yet their generative biases remain underexplored. Existing speech fairness benchmarks rely on synthetic speech and Multiple-Choice Questions (MCQs), both offering a fragmented view of fairness. We propose VIBE, a framework that evaluates generative bias through open-ended tasks such as personalized recommendations, using human-recorded speech. Unlike MCQs, our method allows stereotypical associations to manifest organically without predefined options, making it easily extensible to new tasks. Evaluating 12 state-of-the-art LALMs reveals systematic biases in realistic scenarios. Both gender and accent cues trigger statistically significant distributional shifts, and bias magnitude is strongly task-dependent.}
@@ -637,12 +658,12 @@
   abstract    = {Current bias evaluations in Instruction Text-to-Speech (ITTS) often rely on univariate testing, overlooking the compositional structure of social cues. In this work, we investigate gender bias by modeling prompts as combinations of Social Status, Career stereotypes, and Persona descriptors. Analyzing open-source ITTS models, we uncover systematic interaction effects where social dimensions modulate one another, creating complex bias patterns missed by univariate baselines. Crucially, our findings indicate that these biases extend beyond surface-level artifacts, demonstrating strong associations with the semantic priors of pre-trained text encoders and the skewed distributions inherent in training data. We further demonstrate that generic diversity prompting is insufficient to override these entrenched patterns, underscoring the need for compositional analysis to diagnose latent risks in generative speech.}
 }
 
-@article{lu2026auditory,
-  abbr        = {arXiv},
+@inproceedings{lu2026auditory,
+  abbr        = {SLT},
   bibtex_show = {true},
   title       = {How Auditory Knowledge in LLM Backbones Shapes Audio Language Models: A Holistic Evaluation},
   author      = {Ke-Han Lu and Szu-Wei Fu and Chao-Han Huck Yang and Zhehuai Chen and Sung-Feng Huang and Chih-Kai Yang and Yi-Cheng Lin and Chi-Yuan Hsiao and Wenze Ren and En-Pei Hu and Yu-Han Huang and An-Yu Cheng and Cheng-Han Chiang and Yu Tsao and Yu-Chiang Frank Wang and Hung-yi Lee},
-  journal     = {arXiv preprint arXiv:2603.19195},
+  booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
   year        = {2026},
   arxiv       = {2603.19195},
   abstract    = {Large language models (LLMs) have been widely used as knowledge backbones of Large Audio Language Models (LALMs), yet how much auditory knowledge they encode through text-only pre-training and how this affects downstream performance remains unclear. We study this gap by comparing different LLMs under two text-only and one audio-grounded setting: (1) direct probing on AKB-2000, a curated benchmark testing the breadth and depth of auditory knowledge; (2) cascade evaluation, where LLMs reason over text descriptions from an audio captioner; and (3) audio-grounded evaluation, where each LLM is fine-tuned into a Large Audio Language Model (LALM) with an audio encoder. Our findings reveal that auditory knowledge varies substantially across families, and text-only results are strongly correlated with audio performance. Our work provides empirical grounding for a comprehensive understanding of LLMs in audio research.},
@@ -660,12 +681,12 @@
   abstract    = {The Mean Opinion Score (MOS) serves as the standard metric for speech quality assessment, yet biases in human annotations remain underexplored. We conduct the first systematic analysis of gender bias in MOS, revealing that male listeners consistently assign higher scores than female listeners--a gap that is most pronounced in low-quality speech and gradually diminishes as quality improves. This quality-dependent structure proves difficult to eliminate through simple calibration. We further demonstrate that automated MOS models trained on aggregated labels exhibit predictions skewed toward male standards of perception. To address this, we propose a gender-aware model that learns gender-specific scoring patterns through abstracting binary group embeddings, thereby improving overall and gender-specific prediction accuracy. This study establishes that gender bias in MOS constitutes a systematic, learnable pattern demanding attention in equitable speech evaluation.}
 }
 
-@article{lin2026contrastive,
-  abbr        = {arXiv},
+@inproceedings{lin2026contrastive,
+  abbr        = {SLT},
   bibtex_show = {true},
   title       = {How Contrastive Decoding Enhances Large Audio Language Models?},
   author      = {Tzu-Quan Lin and Wei-Ping Huang and Yi-Cheng Lin and Hung-yi Lee},
-  journal     = {arXiv preprint arXiv:2603.09232},
+  booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
   year        = {2026},
   arxiv       = {2603.09232},
   abstract    = {While Contrastive Decoding (CD) has proven effective at enhancing Large Audio Language Models (LALMs), the underlying mechanisms driving its success and the comparative efficacy of different strategies remain unclear. This study systematically evaluates four distinct CD strategies across diverse LALM architectures. We identify Audio-Aware Decoding and Audio Contrastive Decoding as the most effective methods. However, their impact varies significantly by model. To explain this variability, we introduce a Transition Matrix framework to map error pattern shifts during inference. Our analysis demonstrates that CD reliably rectifies errors in which models falsely claim an absence of audio or resort to uncertainty-driven guessing. Conversely, it fails to correct flawed reasoning or confident misassertions. Ultimately, these findings provide a clear guideline for determining which LALM architectures are most suitable for CD enhancement based on their baseline error profiles.}

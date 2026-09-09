@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Three preprints released: [EduPanel](/bibliography/dong2026edupanel/), [Hearing Like Humans?](/bibliography/tsai2026hearing/), [Escaping the Procrustean Bed](/bibliography/chung2026escaping/).
+Two preprints released: [EduPanel](/bibliography/dong2026edupanel/), [Escaping the Procrustean Bed](/bibliography/chung2026escaping/).
