@@ -107,6 +107,29 @@
   abstract    = {Large Audio-Language Models (LALMs) are increasingly integrated into daily applications, yet their generative biases remain underexplored. Existing speech fairness benchmarks rely on synthetic speech and Multiple-Choice Questions (MCQs), both offering a fragmented view of fairness. We propose VIBE, a framework that evaluates generative bias through open-ended tasks such as personalized recommendations, using human-recorded speech. Unlike MCQs, our method allows stereotypical associations to manifest organically without predefined options, making it easily extensible to new tasks. Evaluating 12 state-of-the-art LALMs reveals systematic biases in realistic scenarios. Both gender and accent cues trigger statistically significant distributional shifts, and bias magnitude is strongly task-dependent.}
 }
 
+@inproceedings{xie2026twsoundk,
+  abbr        = {ISCSLP},
+  bibtex_show = {true},
+  title       = {TW-Sound580K: A Regional Audio-Text Dataset with Verification-Guided Curation for Localized Audio-Language Modeling},
+  author      = {Hao-Hui Xie and Ho-Lam Chung and Yi-Cheng Lin and Ke-Han Lu and Wenze Ren and Xie Chen and Hung-yi Lee},
+  booktitle   = {Proc. ISCSLP 2026},
+  year        = {2026},
+  arxiv       = {2603.05094},
+  abstract    = {Large Audio-Language Models (LALMs) typically struggle with localized dialectal prosody due to the scarcity of specialized corpora. We present TW-Sound580K, a Taiwanese audio-text instruction dataset developed through a Verify-Generate-Critique (VGC) protocol. This pipeline leverages Dual-ASR validation to filter 522K raw clips, subsequently expanding them into 580,000 high-fidelity instruction pairs using a teacher model. The dataset's utility is demonstrated through Tai-LALM, which fine-tunes a DeSTA 2.5-Audio-initialized backbone and incorporates a dynamic Dual-ASR Arbitration strategy to optimize transcription selection during inference. On the TAU Benchmark, Tai-LALM reaches 49.1% accuracy, marking a 6.5% absolute improvement over the zero-shot baseline (42.6% with ASR text conditioning). This confirms that integrating regional corpora with rigorous curation and dynamic arbitration significantly enhances LALM performance on localized speech.}
+}
+
+@inproceedings{hsu2025breezyvoice,
+  abbr        = {ISCSLP},
+  bibtex_show = {true},
+  title       = {BreezyVoice: Adapting TTS for Taiwanese Mandarin with Enhanced Polyphone Disambiguation -- Challenges and Insights},
+  author      = {Chan-Jan Hsu and Yi-Cheng Lin and Chia-Chun Lin and Wei-Chih Chen and Ho Lam Chung and Chen-An Li and Yi-Chang Chen and Chien-Yu Yu and Ming-Ji Lee and Chien-Cheng Chen and Ru-Heng Huang and Hung-yi Lee and Da-Shan Shiu},
+  booktitle   = {Proc. ISCSLP 2026},
+  year        = {2025},
+  arxiv       = {2501.17790},
+  code        = {https://github.com/mtkresearch/BreezyVoice},
+  abstract    = {We present BreezyVoice, a Text-to-Speech (TTS) system specifically adapted for Taiwanese Mandarin, highlighting phonetic control abilities to address the unique challenges of polyphone disambiguation in the language. Building upon CosyVoice, we incorporate a $S^{3}$ tokenizer, a large language model (LLM), an optimal-transport conditional flow matching model (OT-CFM), and a grapheme to phoneme prediction model, to generate realistic speech that closely mimics human utterances. Our evaluation demonstrates BreezyVoice's superior performance in both general and code-switching contexts, highlighting its robustness and effectiveness in generating high-fidelity speech. Additionally, we address the challenges of generalizability in modeling long-tail speakers and polyphone disambiguation. Our approach significantly enhances performance and offers valuable insights into the workings of neural codec TTS systems.}
+}
+
 @inproceedings{hsu2026fallacy,
   abbr        = {ACL},
   bibtex_show = {true},
@@ -704,17 +727,6 @@
   abstract    = {The Mean Opinion Score (MOS) serves as the standard metric for speech quality assessment, yet biases in human annotations remain underexplored. We conduct the first systematic analysis of gender bias in MOS, revealing that male listeners consistently assign higher scores than female listeners--a gap that is most pronounced in low-quality speech and gradually diminishes as quality improves. This quality-dependent structure proves difficult to eliminate through simple calibration. We further demonstrate that automated MOS models trained on aggregated labels exhibit predictions skewed toward male standards of perception. To address this, we propose a gender-aware model that learns gender-specific scoring patterns through abstracting binary group embeddings, thereby improving overall and gender-specific prediction accuracy. This study establishes that gender bias in MOS constitutes a systematic, learnable pattern demanding attention in equitable speech evaluation.}
 }
 
-@inproceedings{xie2026twsoundk,
-  abbr        = {ISCSLP},
-  bibtex_show = {true},
-  title       = {TW-Sound580K: A Regional Audio-Text Dataset with Verification-Guided Curation for Localized Audio-Language Modeling},
-  author      = {Hao-Hui Xie and Ho-Lam Chung and Yi-Cheng Lin and Ke-Han Lu and Wenze Ren and Xie Chen and Hung-yi Lee},
-  booktitle   = {Proc. ISCSLP 2026},
-  year        = {2026},
-  arxiv       = {2603.05094},
-  abstract    = {Large Audio-Language Models (LALMs) typically struggle with localized dialectal prosody due to the scarcity of specialized corpora. We present TW-Sound580K, a Taiwanese audio-text instruction dataset developed through a Verify-Generate-Critique (VGC) protocol. This pipeline leverages Dual-ASR validation to filter 522K raw clips, subsequently expanding them into 580,000 high-fidelity instruction pairs using a teacher model. The dataset's utility is demonstrated through Tai-LALM, which fine-tunes a DeSTA 2.5-Audio-initialized backbone and incorporates a dynamic Dual-ASR Arbitration strategy to optimize transcription selection during inference. On the TAU Benchmark, Tai-LALM reaches 49.1% accuracy, marking a 6.5% absolute improvement over the zero-shot baseline (42.6% with ASR text conditioning). This confirms that integrating regional corpora with rigorous curation and dynamic arbitration significantly enhances LALM performance on localized speech.}
-}
-
 @article{chen2025cantoasr,
   abbr        = {arXiv},
   bibtex_show = {true},
@@ -724,18 +736,6 @@
   year        = {2025},
   arxiv       = {2511.04139},
   abstract    = {Automatic speech recognition (ASR) is critical for language accessibility, yet low-resource Cantonese remains challenging due to limited annotated data, six lexical tones, tone sandhi, and accent variation. Existing ASR models, such as Whisper, often suffer from high word error rates. Large audio-language models (LALMs), in contrast, can leverage broader contextual reasoning but still require explicit tonal and prosodic acoustic cues. We introduce CantoASR, a collaborative ASR-LALM error correction framework that integrates forced alignment for acoustic feature extraction, a LoRA-finetuned Whisper for improved tone discrimination, and an instruction-tuned Qwen-Audio for prosody-aware correction. Evaluations on spontaneous Cantonese data show substantial CER gains over Whisper-Large-V3. These findings suggest that integrating acoustic cues with LALM reasoning provides a scalable strategy for low-resource tonal and dialectal ASR.}
-}
-
-@inproceedings{hsu2025breezyvoice,
-  abbr        = {ISCSLP},
-  bibtex_show = {true},
-  title       = {BreezyVoice: Adapting TTS for Taiwanese Mandarin with Enhanced Polyphone Disambiguation -- Challenges and Insights},
-  author      = {Chan-Jan Hsu and Yi-Cheng Lin and Chia-Chun Lin and Wei-Chih Chen and Ho Lam Chung and Chen-An Li and Yi-Chang Chen and Chien-Yu Yu and Ming-Ji Lee and Chien-Cheng Chen and Ru-Heng Huang and Hung-yi Lee and Da-Shan Shiu},
-  booktitle   = {Proc. ISCSLP 2026},
-  year        = {2025},
-  arxiv       = {2501.17790},
-  code        = {https://github.com/mtkresearch/BreezyVoice},
-  abstract    = {We present BreezyVoice, a Text-to-Speech (TTS) system specifically adapted for Taiwanese Mandarin, highlighting phonetic control abilities to address the unique challenges of polyphone disambiguation in the language. Building upon CosyVoice, we incorporate a $S^{3}$ tokenizer, a large language model (LLM), an optimal-transport conditional flow matching model (OT-CFM), and a grapheme to phoneme prediction model, to generate realistic speech that closely mimics human utterances. Our evaluation demonstrates BreezyVoice's superior performance in both general and code-switching contexts, highlighting its robustness and effectiveness in generating high-fidelity speech. Additionally, we address the challenges of generalizability in modeling long-tail speakers and polyphone disambiguation. Our approach significantly enhances performance and offers valuable insights into the workings of neural codec TTS systems.}
 }
 
 @article{yang2024building,
