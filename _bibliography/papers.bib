@@ -19,7 +19,16 @@
   author      = {Chee-En Yu and Yi-Cheng Lin and Sung-Feng Huang and Yun-Shao Tsai and Ho-Lam Chung and Xuanjun Chen and Hung-yi Lee},
   booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
   year        = {2026},
-  html        = {https://openreview.net/forum?id=olqG53lMxD}
+  html        = {https://openreview.net/forum?id=olqG53lMxD},
+  abstract    = {Large Audio Language Models (LALMs) can follow diverse instructions to synthesize speech in specified styles. However,
+                  complex instructions that require simultaneous control over pitch dynamics, speaking rate, and emotional tone often exceed
+                  what a single-pass generation can faithfully realize. While recent reasoning models have shown that intermediate
+                  "thinking" tokens improve output quality, this paradigm has been confined to the text modality. In this work, we extend
+                  reasoning to the audio token space by training a LALM with reinforcement learning to reason over its own speech output.
+                  The model first generates a draft speech as a form of audio-token reasoning, critiques its own generation by reflecting on
+                  the acoustic realization in text, and then produces a refined version conditioned on both the first-pass speech and the
+                  critique, all within a single model. After RL training, the refined two-hop outputs achieve a relative improvement of
+                  7.15% on the InstructTTSEval benchmark, demonstrating the model's reflective ability.}
 }
 
 @inproceedings{chen2026audioicl,
@@ -30,7 +39,16 @@
   booktitle   = {2026 IEEE Spoken Language Technology Workshop (SLT)},
   year        = {2026},
   html        = {https://openreview.net/forum?id=CePOGULXLq},
-  code        = {https://github.com/robert0518/AudioICL-Bench}
+  code        = {https://github.com/robert0518/AudioICL-Bench},
+  abstract    = {In-context learning (ICL) promises training-free adaptation for audio, where labeling every new condition is costly. Yet
+                  existing audio ICL studies largely measure Task Recognition, where demonstrations merely cue pre-trained capabilities,
+                  rather than Task Learning, where a genuinely new input–label mapping must be inferred from demonstrations alone. We
+                  introduce AudioICL-Bench, a diagnostic benchmark whose per-episode rules are resampled so that no correct answer is
+                  recoverable from prior knowledge. Its nine tasks are organized along two axes that separate what must be learned from
+                  demonstrations from what must be perceived in the signal, enabling failures to be attributed to either source. Across five
+                  Large Audio Language Models, the strongest models readily bind arbitrary sounds to new labels when perception is easy, but
+                  collapse on temporal measurement and composing multiple induced rules, revealing two primary capability boundaries:
+                  temporal perception and multi-rule composition.}
 }
 
 @inproceedings{hsu2026fallacy,
