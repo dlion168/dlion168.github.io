@@ -59,9 +59,15 @@ module ScholarMeta
     [parts[0], parts[1]]
   end
 
+  # Equal-contribution markers are display-only. Google Scholar matches authors by
+  # name, so "Yi-Cheng Lin*" in citation_author would read as a different person
+  # from "Yi-Cheng Lin"; strip the markers al-folio's bib layout renders as
+  # superscripts before any metadata goes out.
+  CONTRIB_MARKERS = /[*\u2217\u2020\u2021\u00A7\u00B6\u2016&^]+\z/.freeze
+
   def authors_of(entry)
     raw = clean(entry["author"])
-    raw.split(/\s+and\s+/).map { |a| a.strip }.reject(&:empty?)
+    raw.split(/\s+and\s+/).map { |a| a.strip.sub(CONTRIB_MARKERS, "") }.reject(&:empty?)
   end
 
   def meta_tags(entry, page_url, site_url)

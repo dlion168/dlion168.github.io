@@ -57,7 +57,14 @@ layout: page
         {% else %}
           {% assign display = a %}
         {% endif %}
-        {% if display contains "Yi-Cheng Lin" %}<strong>{{ display }}</strong>{% else %}{{ display }}{% endif %}{% unless forloop.last %}, {% endunless %}
+        {% comment %}
+          Equal-contribution markers render as superscripts, matching how the
+          theme's own bib layout shows them on /publications/. The bold test runs
+          on the stripped name so a marked name is still recognised as the owner.
+        {% endcomment %}
+        {% assign bare = display | replace: "*", "" | replace: "†", "" | replace: "‡" , "" | strip %}
+        {% assign shown = display | replace: "*", "<sup>*</sup>" | replace: "†", "<sup>†</sup>" | replace: "‡", "<sup>‡</sup>" %}
+        {% if bare contains "Yi-Cheng Lin" %}<strong>{{ shown }}</strong>{% else %}{{ shown }}{% endif %}{% unless forloop.last %}, {% endunless %}
       {% endfor %}
     </p>
 
