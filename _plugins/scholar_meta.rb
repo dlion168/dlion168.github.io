@@ -290,6 +290,24 @@ module ScholarMeta
     </style>
   CSS
 
+  # A page description is reused by the theme for the meta tag, Open Graph, and the
+  # schema.org block, so set it before render rather than rewriting the HTML after.
+  # Every bibliography page otherwise inherits the site-wide blurb about the author,
+  # which leaves 60-odd pages telling search and answer engines the same thing.
+  #
+  # Handover 5.4 applies here: the value lands in JSON-LD verbatim, so it has to stay
+  # on one line and must not carry a double quote.
+  def page_description(entry)
+    abstract = clean(entry["abstract"])
+    return nil if abstract.empty?
+
+    text = abstract.tr('"', "'")
+    return text if text.length <= 160
+
+    cut = text[0, 160].rindex(" ") || 160
+    text[0, cut].sub(/[,;:.]\z/, "") + "..."
+  end
+
   def inject(html, payload)
     return html unless html.include?("</head>")
     html.sub("</head>", "#{payload}\n</head>")
@@ -304,6 +322,24 @@ module ScholarMeta
     html.gsub(%r{(<a href="[^"]*huggingface\.co/datasets/[^"]*"[^>]*class="[^"]*btn[^"]*"[^>]*>)[^<]*(</a>)}) do
       "#{Regexp.last_match(1)}Dataset#{Regexp.last_match(2)}"
     end
+  end
+end
+
+Jekyll::Hooks.register :pages, :pre_render do |page|
+  begin
+    entry = page.data["entry"]
+    if entry
+      desc = ScholarMeta.page_description(entry)
+      page.data["description"] = desc if desc
+
+      # jekyll-sitemap emits <lastmod> from this key. Bibliography pages are generated
+      # from the .bib file and have no date of their own, so the file's own mtime is
+      # the honest answer -- and it only moves when the publication data actually does.
+      bib = File.join(page.site.source, "_bibliography", "papers.bib")
+      page.data["last_modified_at"] = File.mtime(bib) if File.exist?(bib)
+    end
+  rescue StandardError => e
+    Jekyll.logger.warn "ScholarMeta:", "pre_render skipped #{page.url} — #{e.class}: #{e.message}"
   end
 end
 

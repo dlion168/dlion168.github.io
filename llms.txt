@@ -1,0 +1,30 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+# Yi-Cheng Lin (林羿成)
+
+> PhD student in the Graduate Institute of Communication Engineering, National Taiwan
+> University, advised by Hung-yi Lee in the Speech Processing and Machine Learning Lab,
+> and a Student Researcher at Google Cloud AI. Research on large audio-language models
+> and fairness in speech processing: social bias in speech models, speech emotion
+> recognition, and speech quality assessment.
+
+Identifiers: ORCID 0009-0007-3994-6433 · Google Scholar N1UuQSUAAAAJ · Semantic Scholar 2284761645 · GitHub dlion168
+
+This file follows the llms.txt convention: a plain-text map of the site for
+retrieval systems. Every paper below has its own page carrying the abstract,
+Google Scholar citation_* metadata, and a schema.org ScholarlyArticle block.
+
+## Main pages
+
+- [About]({{ '/' | absolute_url }}): biography, current position, news
+- [Publications]({{ '/publications/' | absolute_url }}): all papers, grouped by year
+- [CV]({{ '/cv/' | absolute_url }}): education, experience, awards, service
+- [News archive]({{ '/news/' | absolute_url }}): full timeline
+- [Repositories]({{ '/repositories/' | absolute_url }}): code
+
+## Papers
+{% assign bib_pages = site.pages | where_exp: "p", "p.url contains '/bibliography/'" | sort: "title" %}
+{% for p in bib_pages %}- [{{ p.title }}]({{ p.url | absolute_url }})
+{% endfor %}

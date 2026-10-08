@@ -8,3 +8,5 @@ _posts/2015-10-20-math.md
 _data/citations.yml
 # Liquid layout; prettier parses it as HTML and chokes on {% if %}-wrapped tags
 _layouts/bib_details.html
+# Liquid inside a .txt map file; prettier has no parser for it
+llms.txt
