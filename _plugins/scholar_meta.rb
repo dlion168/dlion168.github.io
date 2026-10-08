@@ -164,6 +164,10 @@ module ScholarMeta
     same << hf["url"].to_s if hf.is_a?(Hash) && hf["url"]
     same << "https://huggingface.co/#{soc['huggingface_id']}" if soc["huggingface_id"]
     same << "https://www.linkedin.com/in/#{soc['linkedin_username']}"                  if soc["linkedin_username"]
+    # Wikidata ties every other identifier here to one entity, which is what lets a
+    # retrieval system tell this Yi-Cheng Lin from the other one.
+    wd = soc["wikidata"]
+    same << wd["url"].to_s if wd.is_a?(Hash) && wd["url"]
 
     doc = {
       "@context"      => "https://schema.org",

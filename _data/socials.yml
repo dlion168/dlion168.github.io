@@ -23,6 +23,15 @@ arxiv_id: lin_y_10
 github_username: dlion168
 linkedin_username: yclin201220
 
+# Wikidata item Q141677974. Written as a custom social (a logo/title/url mapping)
+# rather than a bare key: jekyll-socials only understands its own table of keys, and
+# hands anything else to the custom-social path, which needs a Hash (see the warning
+# at the top of this file). _plugins/scholar_meta.rb reads the url for sameAs.
+wikidata:
+  logo: https://www.wikidata.org/static/favicon/wikidata.ico
+  title: Wikidata
+  url: https://www.wikidata.org/wiki/Q141677974
+
 huggingface:
   logo: https://huggingface.co/favicon.ico
   title: Hugging Face
