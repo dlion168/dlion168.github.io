@@ -1,6 +1,6 @@
 % ============================================================
 %  Yi-Cheng Lin — publications
-%  57 entries. Cross-checked against the author's Google Scholar
+%  61 entries. Cross-checked against the author's Google Scholar
 %  profile (N1UuQSUAAAAJ), arXiv API, and Crossref. 2026-08-16.
 %
 %  al-folio / jekyll-scholar. Custom fields:
@@ -11,6 +11,90 @@
 
 
 %% ========== Published ==========
+
+@article{chen2026training,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Training-Free Instruction TTS Gender Bias Calibration Using Model-Adaptive Steering},
+  author      = {Kuan-Yu Chen and Yi-Cheng Lin and Jeng-Lin Li and Jian-Jiun Ding},
+  journal     = {arXiv preprint arXiv:2610.09831},
+  year        = {2026},
+  arxiv       = {2610.09831},
+  abstract    = {Instruction text-to-speech (ITTS) systems systematically encode acoustic gender skews from descriptive style prompts,
+                  such as occupations or personas, even when demographic attributes are left unspecified. Calibrating the implicit gender
+                  distribution of the synthesized voices, across heterogeneous architectures and without model retraining or overriding
+                  explicit user prompts, is an open problem. In this work, we propose model-adaptive steering, a training-free bias
+                  calibration method that steers post-encoder conditioning representations using a group deviation vector paired with a
+                  coarse-to-fine strength search on a development set. A deterministic lexical gate bypasses intervention whenever
+                  explicit gender keywords are detected, preserving intended prompt semantics. Evaluated on a 12,800-prompt held-out
+                  benchmark across four ITTS models (three architectures), the proposed method reduces aggregate calibration error from
+                  11.5--28.1 to 0.8--5.9 percentage points (e.g., shifting Parler-TTS Mini from 78.1\% and PromptTTS++ from 27.3\% female
+                  to 50.8--52.4\%). Output rates stay within 0.9 pp across anchor set sizes at fixed operating points, while UTMOS
+                  decreases by at most 0.08 and WER degrades by at most 3.3 pp.}
+}
+
+@article{yu2026paraanya,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {ParaAnya: Accelerating Parallel Diffusion Sampling with Plug-and-Play Output Caching},
+  author      = {Chee-En Yu and Xiao-Xi Tan and Yi-Cheng Lin and Yun-Shao Tsai and Chee-An Yu and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2609.36522},
+  year        = {2026},
+  arxiv       = {2609.36522},
+  abstract    = {Diffusion models have achieved remarkable success in generative tasks, but their inherently sequential sampling process
+                  introduces a severe computational bottleneck. Recent Parallel-in-Time (PinT) solvers attempt to mitigate this by
+                  parallelizing generation across a sliding window of timesteps, advancing the window only when step-wise changes
+                  stabilize. However, this overlapping window mechanism forces the network to repeatedly evaluate the same timesteps. When
+                  the input variations between iterations are minimal, these redundant evaluations lead to significant computational
+                  waste. To address this inefficiency, we propose ParaAnya, an output cache mechanism agnostic to the parallel sampling
+                  algorithm that can reduce the number of function evaluations (NFE). ParaAnya caches input-output pairs of diffusion
+                  models and reuses the cached output at overlapping timesteps. By dispatching only cache-miss timesteps to GPU workers,
+                  our approach eliminates redundant computation while preserving the structure of the underlying algorithms' update rules.
+                  We integrate ParaAnya into four representative parallel sampling algorithms and evaluate its performance on Stable
+                  Diffusion v1.5. Across four parallel samplers evaluated with DDIM on eight GPUs, ParaAnya provides 1.30x to 2.43x
+                  speedups over their uncached counterparts and reduces NFE by up to 70.1\%, reaching up to a 5.62x speedup over single-
+                  GPU serial sampling while maintaining comparable CLIP scores.}
+}
+
+@article{chen2026rethinking,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Rethinking Automated Voice Similarity by Shifting from EER to Embedding Geometry},
+  author      = {Szu-Chi Chen and Jia-Kai Dong and Yi-Cheng Lin and Sung-Feng Huang and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2609.33999},
+  year        = {2026},
+  arxiv       = {2609.33999},
+  abstract    = {Speaker verification (SV) models are commonly assumed to better capture nuances among speaker characteristics as
+                  verification accuracy improves, leading to their widespread use as automated proxies for human voice similarity in
+                  speech generation tasks. However, by establishing a human perceptual alignment metric and conducting systematic
+                  analysis, we demonstrate that perceptual alignment is governed far more by how a model is trained (its learning
+                  objective) than by how well it performs (EER). Notably, standard margin-based classification losses (e.g., AAM-Softmax)
+                  yield substantially lower perceptual alignment than prototypical metric losses, while EER itself fails to track human
+                  judgment, directly challenging the community's implicit assumption. We trace this divergence to embedding geometry,
+                  where a model's effective dimensionality (d_eff) tracks perceptual alignment with a -0.95 rank correlation, revealing
+                  that the dimensional spread favored by classification losses fundamentally clashes with the low-dimensional nature of
+                  human voice perception. Imposing a dimensionality bottleneck compresses d_eff and raises perceptual alignment
+                  (rho_align) from 0.08 to 0.74, establishing a principled geometric criterion for evaluating voice similarity.}
+}
+
+@article{tsai2026human,
+  abbr        = {arXiv},
+  bibtex_show = {true},
+  title       = {Toward Human-Aligned Judgement of Speech Emotion Similarity},
+  author      = {Yun-Shao Tsai and Yi-Cheng Lin and Chih-Kai Yang and Ho-Jung Cheng and Tsun-Yi Chang and Sheng-Wei Wu and Yi-Shan Chen
+                  and Hsiang-Chun Chang and Liang-Chieh Lee and Hung-yi Lee},
+  journal     = {arXiv preprint arXiv:2609.32504},
+  year        = {2026},
+  arxiv       = {2609.32504},
+  abstract    = {Evaluating emotion preservation in expressive speech generation involves assessing how closely generated speech matches a
+                  reference in emotion. Human listening tests assess this similarity, but their cost motivates automatic measures aligned
+                  with human judgments. To support the development and evaluation of such measures, we introduce SES-Bench, a speech
+                  emotion similarity benchmark built from human comparisons of two candidate utterances against a shared reference. These
+                  comparisons record which candidate listeners find emotionally closer to the reference and the strength of their
+                  preference. Using these annotations, we train SES-Judge to score emotion similarity between two utterances. SES-Judge
+                  significantly outperforms embedding cosine similarity and prompted large audio-language models in preference accuracy
+                  and correlation with human ratings that capture both preference direction and strength.}
+}
 
 @inproceedings{lu2026auditory,
   abbr        = {SLT},
