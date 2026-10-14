@@ -26,6 +26,9 @@
 "EMNLP":
   url: https://aclanthology.org/
   color: "#a61e4d"
+"TMLR":
+  url: https://jmlr.org/tmlr/
+  color: "#6d28d9"
 "ICLR":
   url: https://iclr.cc/
   color: "#b34700"

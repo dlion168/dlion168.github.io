@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Preprint released: [Training-Free Instruction TTS Gender Bias Calibration](/bibliography/chen2026training/) ([arXiv:2610.09831](https://arxiv.org/abs/2610.09831)).
+Four preprints released: [ParaAnya](/bibliography/yu2026paraanya/), [Rethinking Automated Voice Similarity](/bibliography/chen2026rethinking/), [Toward Human-Aligned Judgement of Speech Emotion Similarity](/bibliography/tsai2026human/), [Training-Free Instruction TTS Gender Bias Calibration](/bibliography/chen2026training/).
